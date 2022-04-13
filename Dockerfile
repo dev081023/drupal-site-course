@@ -1,6 +1,5 @@
 FROM php:8.1-apache
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update \
-  && apt-get install -y --no-install-recommends git zlib1g-dev libzip-dev zip unzip libpng-dev
   && apt-get install -y --no-install-recommends git zlib1g-dev libzip-dev zip unzip libpng-dev default-mysql-client
 RUN docker-php-ext-install pdo_mysql gd opcache
 

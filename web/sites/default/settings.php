@@ -777,17 +777,9 @@ $databases['default']['default'] = array(
 $settings['hash_salt'] = getenv('HASH_SALT');
 $settings['config_sync_directory'] = '../config';
 $settings['trusted_host_patterns'][] = getenv('PROJECT_BASE_URL');
+$settings['skip_permissions_hardening'] = TRUE;
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
-}$databases['default']['default'] = array (
-  'database' => 'test',
-  'username' => 'user',
-  'password' => 'password',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['hash_salt'] = 'b6VgrRT9A0NzFNZE13eWAtHuEuBvROU79zDop9ZdMGK2ymStcCLOxupI-x3cj5yqrw4iuxYF0A';
+}
+//$settings['hash_salt'] = 'b6VgrRT9A0NzFNZE13eWAtHuEuBvROU79zDop9ZdMGK2ymStcCLOxupI-x3cj5yqrw4iuxYF0A';

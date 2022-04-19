@@ -12,5 +12,6 @@ build:
     - make install
 test:
   stage: test
-  script: make test
+  script:
+    - make test
 

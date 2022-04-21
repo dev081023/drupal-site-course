@@ -1,16 +1,16 @@
-uuid: 3dcfb64a-976a-4c84-8326-7812a416551c
+uuid: 15953ea5-7f6e-40d9-b4f4-ef9cc72bcc55
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_directory
+    - field.storage.node.field_actor
     - node.type.movies
-    - taxonomy.vocabulary.directory
-id: node.movies.field_directory
-field_name: field_directory
+    - taxonomy.vocabulary.actors
+id: node.movies.field_actor
+field_name: field_actor
 entity_type: node
 bundle: movies
-label: Directory
+label: Actor
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      directory: directory
+      actors: actors
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

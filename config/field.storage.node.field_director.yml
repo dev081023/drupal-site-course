@@ -1,19 +1,19 @@
-uuid: ce41f718-02bc-404d-a46b-fe832b730f88
+uuid: 2264bbee-2714-4bb4-b028-2caebe15ba4e
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_actors
-field_name: field_actors
+id: node.field_director
+field_name: field_director
 entity_type: node
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.movies.body
-    - field.field.node.movies.field_actors
+    - field.field.node.movies.field_actor
     - field.field.node.movies.field_category
     - field.field.node.movies.field_countries
     - field.field.node.movies.field_date_release
-    - field.field.node.movies.field_directory
+    - field.field.node.movies.field_director
     - field.field.node.movies.field_image
     - image.style.thumbnail
     - node.type.movies
@@ -53,7 +53,7 @@ content:
     weight: 0
     region: content
 hidden:
-  field_actors: true
+  field_actor: true
   field_countries: true
   field_date_release: true
-  field_directory: true
+  field_director: true

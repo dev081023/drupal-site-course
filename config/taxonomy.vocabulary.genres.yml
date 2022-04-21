@@ -1,0 +1,8 @@
+uuid: d9f88d99-6351-4202-a5cb-a87a9f043515
+langcode: en
+status: true
+dependencies: {  }
+name: Genres
+vid: genres
+description: 'Movie genres are stored here'
+weight: 0

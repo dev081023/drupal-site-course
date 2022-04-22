@@ -1,0 +1,30 @@
+uuid: de39e5c4-4c0d-475b-9c6d-9d2500f2d4e4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b2667174-2465-41bc-b5f4-a29e78126599'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap5
+id: blockfromnewspage
+theme: bootstrap5
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:b2667174-2465-41bc-b5f4-a29e78126599'
+settings:
+  id: 'block_content:b2667174-2465-41bc-b5f4-a29e78126599'
+  label: 'Block From News'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

@@ -1,0 +1,48 @@
+uuid: 56ad0396-59c0-4a44-aa8e-ce5e5ac05b38
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:45d5aceb-5b3a-493d-9891-937f0f2c5e17'
+  module:
+    - block_content
+    - system
+label: Sport
+name: sport
+group: Theme
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: daabb0a3-1abc-4921-bccb-79d31e4313f8
+    context_mapping: {  }
+    pages: "/category/sport\r\n/category/sport/*"
+reactions:
+  blocks:
+    id: blocks
+    uuid: c619d303-ab0d-49bd-ad8a-82a292e4e61e
+    blocks:
+      5aea3770-3a6c-44d6-8f21-4d062e627ea6:
+        uuid: 5aea3770-3a6c-44d6-8f21-4d062e627ea6
+        id: 'block_content:45d5aceb-5b3a-493d-9891-937f0f2c5e17'
+        label: 'Block From Sport'
+        provider: block_content
+        label_display: visible
+        region: sidebar_second
+        weight: '0'
+        custom_id: block_content_45d5aceb_5b3a_493d_9891_937f0f2c5e17
+        theme: bootstrap5
+        css_class: ''
+        unique: 0
+        context_id: sport
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

@@ -14,6 +14,8 @@ module:
   comment: 0
   config: 0
   contact: 0
+  context: 0
+  context_ui: 0
   contextual: 0
   ctools: 0
   datetime: 0

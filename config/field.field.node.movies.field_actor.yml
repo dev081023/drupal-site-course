@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_actor
     - node.type.movies
-    - taxonomy.vocabulary.actors
 id: node.movies.field_actor
 field_name: field_actor
 entity_type: node
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      actors: actors
+    target_bundles: {  }
     sort:
       field: name
       direction: asc

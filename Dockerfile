@@ -21,9 +21,6 @@ RUN pecl install xdebug \
       } > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
 
 RUN echo "memory_limit=256M" > /usr/local/etc/php/conf.d/docker-php-ext-custom.ini
-RUN echo "extension=gd2" >> /usr/local/etc/php/conf.d/docker-php-ext-custom.ini
-
-#RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/
 
 COPY vhost.conf /etc/apache2/sites-enabled/000-default.conf
 

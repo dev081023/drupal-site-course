@@ -10,11 +10,11 @@ dependencies:
     - field.field.node.movies.field_countries
     - field.field.node.movies.field_date_release
     - field.field.node.movies.field_director
-    - field.field.node.movies.field_image
+    - field.field.node.movies.field_media_image
     - image.style.thumbnail
     - node.type.movies
   module:
-    - image
+    - media
     - text
     - user
 id: node.movies.teaser
@@ -38,11 +38,11 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_image:
-    type: image
+  field_media_image:
+    type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
+      image_link: content
       image_style: thumbnail
     third_party_settings: {  }
     weight: 1

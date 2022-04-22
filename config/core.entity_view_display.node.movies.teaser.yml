@@ -11,12 +11,17 @@ dependencies:
     - field.field.node.movies.field_date_release
     - field.field.node.movies.field_director
     - field.field.node.movies.field_media_image
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.movies
   module:
+    - layout_builder
     - media
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.movies.teaser
 targetEntityType: node
 bundle: movies
@@ -26,7 +31,7 @@ content:
     type: text_summary_or_trimmed
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: 300
     third_party_settings: {  }
     weight: 2
     region: content
@@ -43,7 +48,7 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: thumbnail
+      image_style: medium
     third_party_settings: {  }
     weight: 1
     region: content

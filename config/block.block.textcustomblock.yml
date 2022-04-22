@@ -1,0 +1,30 @@
+uuid: 6f4ea9c1-df22-4a81-8051-7ee858f69977
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bbb4864e-fc87-40d2-a16d-22ac32cbc0b5'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap5
+id: textcustomblock
+theme: bootstrap5
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:bbb4864e-fc87-40d2-a16d-22ac32cbc0b5'
+settings:
+  id: 'block_content:bbb4864e-fc87-40d2-a16d-22ac32cbc0b5'
+  label: 'Text Custom Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

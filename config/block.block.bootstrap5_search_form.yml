@@ -4,14 +4,15 @@ status: true
 dependencies:
   module:
     - search
+    - system
   theme:
     - bootstrap5
 _core:
   default_config_hash: HZJ8894mYbX0pdeltUdfnQjONb-BnkflWDqEm_x13m4
 id: bootstrap5_search_form
 theme: bootstrap5
-region: nav_additional
-weight: 0
+region: sidebar_second
+weight: -6
 provider: null
 plugin: search_form_block
 settings:
@@ -20,4 +21,8 @@ settings:
   label_display: '0'
   provider: search
   page_id: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

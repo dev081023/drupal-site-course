@@ -19,6 +19,7 @@
     "drupal/adminimal_admin_toolbar": "^1.11",
     "drupal/bootstrap": "^3.24",
     "drupal/bootstrap5": "^1.1",
+    "drupal/context": "^4.1",
     "drupal/core-composer-scaffold": "^9.3",
     "drupal/core-project-message": "^9.3",
     "drupal/core-recommended": "^9.3",

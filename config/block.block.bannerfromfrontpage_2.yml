@@ -1,0 +1,50 @@
+uuid: 352ebe89-0c9e-4d40-94d7-adf426e97d5e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:a9701938-2926-4077-aff0-d41522cf9858'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - olivero
+id: bannerfromfrontpage_2
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: 'block_content:a9701938-2926-4077-aff0-d41522cf9858'
+settings:
+  id: 'block_content:a9701938-2926-4077-aff0-d41522cf9858'
+  label: 'Banner From Frontpage'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

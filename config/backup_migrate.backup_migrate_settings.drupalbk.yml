@@ -1,0 +1,28 @@
+uuid: f4798110-d98c-4a71-bb17-26e67195c60e
+langcode: en
+status: true
+dependencies: {  }
+id: drupalbk
+label: DrupalBK
+config:
+  namer:
+    filename: backup
+    timestamp: true
+    timestamp_format: Y-m---TH-i-s
+  compressor:
+    compression: gzip
+  utils:
+    site_offline: false
+  metadata:
+    description: ''
+  private_files_exclude:
+    exclude_filepaths:
+      - backup_migrate
+  public_files_exclude:
+    exclude_filepaths:
+      - js
+      - css
+      - php
+      - styles
+      - 'config_*'
+      - .htaccess

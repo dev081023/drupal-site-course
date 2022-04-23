@@ -5,6 +5,7 @@ module:
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
+  backup_migrate: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -20,6 +21,8 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -42,6 +45,8 @@ module:
   path: 0
   path_alias: 0
   rdf: 0
+  realistic_dummy_content: 0
+  realistic_dummy_content_api: 0
   search: 0
   shortcut: 0
   system: 0

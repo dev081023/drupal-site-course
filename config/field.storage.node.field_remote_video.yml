@@ -1,0 +1,20 @@
+uuid: d44fb8e8-4a88-415d-95bd-af5dce6f86d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_remote_video
+field_name: field_remote_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

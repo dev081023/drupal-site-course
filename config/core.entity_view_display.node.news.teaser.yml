@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.news.field_created
     - field.field.node.news.field_news_image
     - field.field.node.news.field_tags
-    - image.style.medium
+    - image.style.thin
     - node.type.news
   module:
     - media
@@ -41,7 +41,7 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: medium
+      image_style: thin
     third_party_settings: {  }
     weight: 0
     region: content

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: thin
-label: Thin
+label: 'Thin(Scale 300x150)'
 effects:
   096bbe5b-eb15-441d-96c2-c1da571937b9:
     uuid: 096bbe5b-eb15-441d-96c2-c1da571937b9
@@ -11,5 +11,5 @@ effects:
     weight: 1
     data:
       width: 300
-      height: null
+      height: 150
       upscale: true

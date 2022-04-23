@@ -46,4 +46,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/news\r\n/category/*"
+    pages: "/news\r\n/category\r\n/category/*\r\n/tag\r\n/tag/*"

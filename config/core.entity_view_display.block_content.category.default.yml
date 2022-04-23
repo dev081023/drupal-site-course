@@ -1,0 +1,21 @@
+uuid: 6c97c10b-821c-49f1-9720-d86b691d9076
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.category
+    - field.field.block_content.category.field_category
+id: block_content.category.default
+targetEntityType: block_content
+bundle: category
+mode: default
+content:
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

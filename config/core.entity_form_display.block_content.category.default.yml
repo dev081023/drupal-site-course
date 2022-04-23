@@ -1,0 +1,31 @@
+uuid: 1369870e-23cf-42bd-acec-9a1cf2a8a2be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.category
+    - field.field.block_content.category.field_category
+id: block_content.category.default
+targetEntityType: block_content
+bundle: category
+mode: default
+content:
+  field_category:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

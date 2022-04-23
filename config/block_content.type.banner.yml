@@ -1,0 +1,8 @@
+uuid: fc715a19-a837-49c8-ad7c-c169af2cf11f
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+revision: 0
+description: 'Block for displaying image banners'

@@ -15,6 +15,7 @@ dependencies:
     - node.type.news
   module:
     - media
+    - options
     - text
     - user
 id: node.news.teaser
@@ -47,9 +48,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_region:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   field_created: true
-  field_region: true
   field_remote_video: true
   field_tags: true
   links: true

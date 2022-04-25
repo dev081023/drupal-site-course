@@ -1,0 +1,21 @@
+uuid: d24ee7d6-c527-479c-b7a2-50cf6b36b945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.news
+  module:
+    - options
+id: node.news.field_region
+field_name: field_region
+entity_type: node
+bundle: news
+label: Region
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

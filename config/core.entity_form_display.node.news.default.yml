@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.news.field_category
     - field.field.node.news.field_created
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_region
     - field.field.node.news.field_remote_video
     - field.field.node.news.field_tags
     - node.type.news
@@ -54,6 +55,12 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_region:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_remote_video:
     type: media_library_widget

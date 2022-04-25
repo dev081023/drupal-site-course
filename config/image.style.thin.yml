@@ -5,11 +5,11 @@ dependencies: {  }
 name: thin
 label: 'Thin(Scale 300x150)'
 effects:
-  096bbe5b-eb15-441d-96c2-c1da571937b9:
-    uuid: 096bbe5b-eb15-441d-96c2-c1da571937b9
-    id: image_scale
-    weight: 1
+  2c78ca62-c561-491e-b9bf-451a392c26da:
+    uuid: 2c78ca62-c561-491e-b9bf-451a392c26da
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 300
       height: 150
-      upscale: true
+      anchor: center-center

@@ -214,7 +214,7 @@ display:
           title: ''
           default_argument_type: taxonomy_tid
           default_argument_options:
-            term_page: '1'
+            term_page: '0'
             node: true
             limit: true
             vids:

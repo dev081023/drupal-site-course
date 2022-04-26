@@ -1,25 +1,25 @@
-uuid: bc246d75-f649-4977-b6c9-2fa674379049
+uuid: 8f95bcfd-7a83-4419-bbe3-a14593e9e1dc
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.content_recent
+    - views.view.related_content
   module:
     - context
-    - system
+    - node
     - views
   theme:
     - olivero
-id: views_block__content_recent_block_1
+id: views_block__related_content_block_1
 theme: olivero
-region: content_above
+region: content_below
 weight: 0
 provider: null
-plugin: 'views_block:content_recent-block_1'
+plugin: 'views_block:related_content-block_1'
 settings:
-  id: 'views_block:content_recent-block_1'
+  id: 'views_block:related_content-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
   items_per_page: none
@@ -43,7 +43,10 @@ visibility:
     id: context
     negate: null
     values: ''
-  request_path:
-    id: request_path
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
-    pages: '<front>'
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      news: news

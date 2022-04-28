@@ -1,0 +1,50 @@
+uuid: 2bd79699-d3a6-4805-98f5-1452dddaed60
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_ads_by_the_author
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - olivero
+id: views_block__all_ads_by_the_author_block_1
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:all_ads_by_the_author-block_1'
+settings:
+  id: 'views_block:all_ads_by_the_author-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

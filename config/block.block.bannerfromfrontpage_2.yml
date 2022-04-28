@@ -1,6 +1,6 @@
 uuid: 352ebe89-0c9e-4d40-94d7-adf426e97d5e
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:banner:a9701938-2926-4077-aff0-d41522cf9858'
@@ -13,7 +13,7 @@ dependencies:
 id: bannerfromfrontpage_2
 theme: olivero
 region: content_above
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:a9701938-2926-4077-aff0-d41522cf9858'
 settings:

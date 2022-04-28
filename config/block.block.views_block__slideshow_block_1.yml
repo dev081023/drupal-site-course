@@ -1,23 +1,23 @@
-uuid: bc246d75-f649-4977-b6c9-2fa674379049
+uuid: b6b0666e-a933-423f-938f-7fecefc2cc93
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.content_recent
+    - views.view.slideshow
   module:
     - context
     - system
     - views
   theme:
     - olivero
-id: views_block__content_recent_block_1
+id: views_block__slideshow_block_1
 theme: olivero
 region: content_above
-weight: -8
+weight: -9
 provider: null
-plugin: 'views_block:content_recent-block_1'
+plugin: 'views_block:slideshow-block_1'
 settings:
-  id: 'views_block:content_recent-block_1'
+  id: 'views_block:slideshow-block_1'
   label: ''
   label_display: '0'
   provider: views

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_category
+    - field.field.node.news.field_comment
     - field.field.node.news.field_created
     - field.field.node.news.field_news_image
     - field.field.node.news.field_region
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.news.field_tags
     - node.type.news
   module:
+    - comment
     - datetime
     - media_library
     - path
@@ -40,6 +42,12 @@ content:
   field_category:
     type: options_select
     weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    type: comment_default
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }

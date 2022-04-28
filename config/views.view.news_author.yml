@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.user.user_picture
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.news
   module:
     - image
@@ -144,7 +144,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: thumbnail
+            image_style: medium
           group_column: ''
           group_columns: {  }
           group_rows: true

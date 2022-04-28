@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - filter.format.editor_html
+    - media.type.image
+    - media.type.remote_video
     - node.type.article
+    - node.type.news
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -12,6 +15,7 @@ dependencies:
     - contextual
     - file
     - filter
+    - media
     - node
     - path
     - system
@@ -33,16 +37,25 @@ permissions:
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
+  - 'create image media'
+  - 'create news content'
   - 'create page content'
+  - 'create remote_video media'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own image media'
+  - 'delete own news content'
   - 'delete own page content'
+  - 'delete own remote_video media'
   - 'delete page revisions'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own image media'
+  - 'edit own news content'
   - 'edit own page content'
+  - 'edit own remote_video media'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'use text format editor_html'

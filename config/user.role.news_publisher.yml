@@ -1,9 +1,30 @@
 uuid: 39ac335b-4d31-4e48-99d4-7664c0ec1711
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - node.type.news
+  module:
+    - media
+    - node
+    - toolbar
 id: news_publisher
 label: 'News publisher'
 weight: -8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create image media'
+  - 'create news content'
+  - 'create remote_video media'
+  - 'delete any media'
+  - 'delete own image media'
+  - 'delete own news content'
+  - 'delete own remote_video media'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own remote_video media'
+  - 'update media'

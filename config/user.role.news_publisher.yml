@@ -1,0 +1,9 @@
+uuid: f9a3b9d4-edf1-4982-8c94-e6a2b09be1fe
+langcode: en
+status: true
+dependencies: {  }
+id: news_publisher
+label: 'News publisher'
+weight: -7
+is_admin: null
+permissions: {  }

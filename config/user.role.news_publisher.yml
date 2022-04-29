@@ -1,9 +1,28 @@
 uuid: f9a3b9d4-edf1-4982-8c94-e6a2b09be1fe
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - node.type.news
+  module:
+    - media
+    - node
 id: news_publisher
 label: 'News publisher'
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create image media'
+  - 'create news content'
+  - 'create remote_video media'
+  - 'delete media'
+  - 'delete own image media'
+  - 'delete own news content'
+  - 'delete own remote_video media'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own remote_video media'
+  - 'update media'
+  - 'view own unpublished media'

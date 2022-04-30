@@ -11,12 +11,6 @@ dependencies:
     - node.type.news
     - system.menu.main
     - taxonomy.vocabulary.category
-  content:
-    - 'taxonomy_term:category:182b8413-f0d7-42ff-8df8-d37e0daf5c14'
-    - 'taxonomy_term:category:6ea1787b-6310-4973-8ac9-b18bbbd18e6e'
-    - 'taxonomy_term:category:831f2862-9848-43ef-b004-eff729086cb2'
-    - 'taxonomy_term:category:ea454a62-918f-443a-972d-9006bb9b8f5f'
-    - 'taxonomy_term:category:f6b19c4b-e5cd-4987-9408-a24639ba7770'
   module:
     - better_exposed_filters
     - media
@@ -424,59 +418,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            9: 9
-            12: 12
-            8: 8
-            10: 10
-            11: 11
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_category_target_id_op
-            label: Category
-            description: ''
-            use_operator: false
-            operator: field_category_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              news_publisher: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: category
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
         field_region_value:
           id: field_region_value
           table: node__field_region
@@ -520,6 +461,53 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        field_category_target_id:
+          id: field_category_target_id
+          table: node__field_category
+          field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_category_target_id_op
+            label: Category
+            description: ''
+            use_operator: false
+            operator: field_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: category
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:

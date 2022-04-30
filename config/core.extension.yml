@@ -53,7 +53,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  permissions_by_term: 0
   rdf: 0
   realistic_dummy_content: 0
   realistic_dummy_content_api: 0

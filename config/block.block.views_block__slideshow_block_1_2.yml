@@ -1,29 +1,28 @@
-uuid: 4b80cc03-26be-49ff-b558-924c65cb5132
+uuid: 8a00231b-37e5-46b0-8da7-a299cb982a8a
 langcode: en
-status: false
+status: true
 dependencies:
-  content:
-    - 'block_content:banner:a9701938-2926-4077-aff0-d41522cf9858'
+  config:
+    - views.view.slideshow
   module:
-    - block_content
     - context
     - system
+    - views
   theme:
     - bootstrap5
-id: bannerfromfrontpage
+id: views_block__slideshow_block_1_2
 theme: bootstrap5
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:a9701938-2926-4077-aff0-d41522cf9858'
+plugin: 'views_block:slideshow-block_1'
 settings:
-  id: 'block_content:a9701938-2926-4077-aff0-d41522cf9858'
-  label: 'Banner From Frontpage'
+  id: 'views_block:slideshow-block_1'
+  label: ''
   label_display: '0'
-  provider: block_content
-  status: true
-  info: ''
-  view_mode: full
+  provider: views
+  views_label: ''
+  items_per_page: none
 visibility:
   user_status:
     id: user_status

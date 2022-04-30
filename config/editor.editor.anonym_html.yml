@@ -1,0 +1,42 @@
+uuid: 76740c74-add3-4150-9f99-dc9d3c5f04c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.anonym_html
+  module:
+    - ckeditor
+format: anonym_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Styles
+            - Bold
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+  plugins:
+    stylescombo:
+      styles: a|target=_blank
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

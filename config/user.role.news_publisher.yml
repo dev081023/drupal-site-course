@@ -9,6 +9,7 @@ dependencies:
   module:
     - media
     - node
+    - system
     - toolbar
 id: news_publisher
 label: 'News publisher'
@@ -28,3 +29,4 @@ permissions:
   - 'edit own news content'
   - 'edit own remote_video media'
   - 'update media'
+  - 'view the administration theme'

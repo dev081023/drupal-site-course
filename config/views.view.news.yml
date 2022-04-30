@@ -11,6 +11,12 @@ dependencies:
     - node.type.news
     - system.menu.main
     - taxonomy.vocabulary.category
+  content:
+    - 'taxonomy_term:category:182b8413-f0d7-42ff-8df8-d37e0daf5c14'
+    - 'taxonomy_term:category:6ea1787b-6310-4973-8ac9-b18bbbd18e6e'
+    - 'taxonomy_term:category:831f2862-9848-43ef-b004-eff729086cb2'
+    - 'taxonomy_term:category:ea454a62-918f-443a-972d-9006bb9b8f5f'
+    - 'taxonomy_term:category:f6b19c4b-e5cd-4987-9408-a24639ba7770'
   module:
     - better_exposed_filters
     - media
@@ -427,7 +433,12 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            9: 9
+            12: 12
+            8: 8
+            10: 10
+            11: 11
           group: 1
           exposed: true
           expose:
@@ -445,7 +456,7 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              content_editor: '0'
+              news_publisher: '0'
               administrator: '0'
             reduce: false
           is_grouped: false

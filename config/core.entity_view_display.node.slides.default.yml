@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.slides.field_slides
     - node.type.slides
   module:
-    - image
+    - responsive_image
     - text
     - user
 id: node.slides.default
@@ -23,11 +23,11 @@ content:
     weight: 101
     region: content
   field_slides:
-    type: image
+    type: responsive_image
     label: above
     settings:
+      responsive_image_style: ''
       image_link: ''
-      image_style: ''
     third_party_settings: {  }
     weight: 102
     region: content

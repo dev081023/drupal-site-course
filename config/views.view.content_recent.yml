@@ -58,8 +58,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -82,7 +82,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -337,7 +337,7 @@ display:
         type: grid
         options:
           grouping: {  }
-          columns: 3
+          columns: 4
           automatic_width: true
           alignment: horizontal
           row_class_custom: ''
@@ -393,7 +393,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href="/news">All news</a>'
+          content: '<a class="btn btn-default" href="/news">All news</a>'
           tokenize: false
       display_extenders: {  }
     cache_metadata:

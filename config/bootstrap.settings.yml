@@ -1,0 +1,28 @@
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+favicon:
+  mimetype: image/png
+  path: 'public://GO_Sport_logo_2_0.png'
+  url: 'http://drupal.localhost/sites/default/files/GO_Sport_logo_2_0.png'
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://GO_Sport_logo (1).png'
+  url: ''
+  use_default: false
+schemas:
+  bootstrap: 8000
+table_responsive: '-1'
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
+fluid_container: 1
+navbar_position: fixed-top

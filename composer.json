@@ -34,6 +34,7 @@
     "drupal/realistic_dummy_content": "^3.1",
     "drupal/views_infinite_scroll": "^2.0",
     "drupal/views_slideshow": "^4.8",
+    "drupal/webform": "^6.1",
     "drush/drush": "^11.0"
   },
   "conflict": {

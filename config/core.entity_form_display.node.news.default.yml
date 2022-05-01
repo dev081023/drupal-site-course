@@ -15,9 +15,63 @@ dependencies:
   module:
     - comment
     - datetime
+    - field_group
     - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_group:
+      children:
+        - group_content
+        - group_media
+      label: Group
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_media:
+      children:
+        - field_news_image
+        - field_remote_video
+      label: Media
+      region: content
+      parent_name: group_group
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_content:
+      children:
+        - title
+        - body
+        - field_category
+        - field_region
+        - field_tags
+        - field_created
+      label: Content
+      region: content
+      parent_name: group_group
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -35,38 +89,38 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_category:
     type: options_select
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_comment:
     type: comment_default
-    weight: 26
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_created:
     type: datetime_default
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_news_image:
     type: media_library_widget
-    weight: 1
+    weight: 2
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_region:
     type: options_select
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -79,7 +133,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 6
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -89,34 +143,34 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 11
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 14
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 12
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -124,7 +178,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

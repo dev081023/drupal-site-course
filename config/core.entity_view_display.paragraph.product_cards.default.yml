@@ -1,0 +1,69 @@
+uuid: c0512c7a-6163-4fd1-a15d-acff8da5e428
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_cards.field_content
+    - field.field.paragraph.product_cards.field_list_cards
+    - field.field.paragraph.product_cards.field_title
+    - paragraphs.paragraphs_type.product_cards
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      header:
+        - field_title
+        - field_content
+      footer:
+        - field_list_cards
+id: paragraph.product_cards.default
+targetEntityType: paragraph
+bundle: product_cards
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: header
+  field_list_cards:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: footer
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: header
+hidden: {  }

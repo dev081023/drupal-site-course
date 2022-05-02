@@ -1,0 +1,27 @@
+uuid: 7047526f-2f35-433e-92b7-4c80956a2491
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - radix
+_core:
+  default_config_hash: 4VDn3bLy009pYlPUWQBHaaGVJu8FPnxNfr2DYrAnNHI
+id: radix_footer
+theme: radix
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

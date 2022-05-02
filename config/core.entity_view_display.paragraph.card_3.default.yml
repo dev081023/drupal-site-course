@@ -1,0 +1,94 @@
+uuid: 680d9c83-e087-45fd-9db1-d139a6644cb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_3.field_content
+    - field.field.paragraph.card_3.field_image
+    - field.field.paragraph.card_3.field_link
+    - field.field.paragraph.card_3.field_price
+    - field.field.paragraph.card_3.field_title
+    - paragraphs.paragraphs_type.card_3
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      header:
+        - field_image
+      footer:
+        - field_title
+        - field_content
+        - field_price
+        - field_link
+id: paragraph.card_3.default
+targetEntityType: paragraph
+bundle: card_3
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: footer
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: header
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: footer
+  field_price:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: footer
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: footer
+hidden: {  }

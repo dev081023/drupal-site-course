@@ -1,0 +1,10 @@
+uuid: 3420ea4b-28a3-4321-920a-9be22545f54a
+langcode: en
+status: true
+dependencies: {  }
+id: card_4
+label: 'Card 4'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

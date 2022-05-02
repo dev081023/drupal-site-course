@@ -1,0 +1,22 @@
+uuid: 7ba9a6db-ada9-4c2a-bf36-807dee913972
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - radix
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: radix_powered
+theme: radix
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

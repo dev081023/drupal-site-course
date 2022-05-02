@@ -1,0 +1,23 @@
+uuid: d48fed38-b190-4282-87a7-018409e50913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.card_2
+  module:
+    - link
+id: paragraph.card_2.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: card_2
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

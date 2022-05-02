@@ -1,0 +1,10 @@
+uuid: 28a44742-ea8b-44a6-8224-7311f8158d2c
+langcode: en
+status: true
+dependencies: {  }
+id: product_cards
+label: 'Product cards'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

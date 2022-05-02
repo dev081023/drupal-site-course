@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.landing
+    - paragraphs.paragraphs_type.banner_with_a_picture
+    - paragraphs.paragraphs_type.product_cards
   module:
     - entity_reference_revisions
 id: node.landing.field_paragraphs
@@ -20,10 +22,30 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      banner_with_a_picture: banner_with_a_picture
+      product_cards: product_cards
     negate: 0
     target_bundles_drag_drop:
       banner_with_a_picture:
         weight: 2
+        enabled: true
+      card_1:
+        weight: 9
         enabled: false
+      card_2:
+        weight: 10
+        enabled: false
+      card_3:
+        weight: 11
+        enabled: false
+      card_4:
+        weight: 12
+        enabled: false
+      from_library:
+        weight: 13
+        enabled: false
+      product_cards:
+        weight: 14
+        enabled: true
 field_type: entity_reference_revisions

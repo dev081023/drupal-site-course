@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2b7b0fc4b44dedc3fd669628e0c5c8c",
+    "content-hash": "b3b4aff169139b34065834c44be06f36",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3106,6 +3106,74 @@
             }
         },
         {
+            "name": "drupal/entity_usage",
+            "version": "2.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_usage.git",
+                "reference": "8.x-2.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta6.zip",
+                "reference": "8.x-2.0-beta6",
+                "shasum": "b641f9549fc3edaa81f0548f0fc209ece3ed369c"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/block_field": "~1.0",
+                "drupal/dynamic_entity_reference": "~1.0",
+                "drupal/entity_browser": "~2.0",
+                "drupal/entity_browser_block": "~1.0",
+                "drupal/entity_embed": "~1.0",
+                "drupal/entity_reference_revisions": "~1.0",
+                "drupal/inline_entity_form": "^1.0@RC",
+                "drupal/paragraphs": "~1.0",
+                "drupal/webform": "^6.0.0-alpha4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-beta6",
+                    "datestamp": "1633676588",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "marcoscano",
+                    "homepage": "https://www.drupal.org/user/1288796"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
+                }
+            ],
+            "description": "Track usage of entities referenced by other entities",
+            "homepage": "https://www.drupal.org/project/entity_usage",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_usage",
+                "issues": "http://drupal.org/project/issues/entity_usage"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "3.2.0",
             "source": {
@@ -3421,6 +3489,63 @@
             }
         },
         {
+            "name": "drupal/layout_paragraphs",
+            "version": "2.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_paragraphs.git",
+                "reference": "2.0.0-beta9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_paragraphs-2.0.0-beta9.zip",
+                "reference": "2.0.0-beta9",
+                "shasum": "9891615664289134f607377a70bb1a5c1a386dae"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/paragraphs": "^1.6"
+            },
+            "require-dev": {
+                "drupal/entity_usage": "2.x-dev",
+                "drupal/paragraphs-paragraphs_library": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta9",
+                    "datestamp": "1649970500",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "itamair",
+                    "homepage": "https://www.drupal.org/user/1179076"
+                },
+                {
+                    "name": "justin2pin",
+                    "homepage": "https://www.drupal.org/user/278450"
+                }
+            ],
+            "description": "Layout Paragraphs",
+            "homepage": "https://www.drupal.org/project/layout_paragraphs",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_paragraphs",
+                "issues": "https://www.drupal.org/project/issues/layout_paragraphs"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.14.0",
             "source": {
@@ -3621,6 +3746,77 @@
             "homepage": "https://www.drupal.org/project/permissions_by_term",
             "support": {
                 "source": "https://git.drupalcode.org/project/permissions_by_term"
+            }
+        },
+        {
+            "name": "drupal/radix",
+            "version": "4.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/radix.git",
+                "reference": "8.x-4.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/radix-8.x-4.11.zip",
+                "reference": "8.x-4.11",
+                "shasum": "baef31faca4669d0e8dfecefc7af33d155c9916c"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9.0"
+            },
+            "require-dev": {
+                "consolidation/robo": "^1.1.4 || ^2",
+                "drush/drush": "^10.6"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.11",
+                    "datestamp": "1643473963",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drush\\Commands\\radix\\": "Commands/radix/"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Arshad Chummun",
+                    "homepage": "https://arshad.io",
+                    "email": "arshad@chummun.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ng Chin Kiong",
+                    "homepage": "https://www.o8.agency",
+                    "email": "ck@o8.agency",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
+                }
+            ],
+            "description": "Radix is a base theme for Drupal. It has Bootstrap, Sass, BrowserSync and Font Awesome built-in.",
+            "homepage": "https://www.drupal.org/project/radix",
+            "support": {
+                "source": "https://git.drupalcode.org/project/radix",
+                "issues": "https://www.drupal.org/project/issues/radix"
             }
         },
         {
@@ -12569,7 +12765,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drupal/default_content": 15
+        "drupal/default_content": 15,
+        "drupal/entity_usage": 10,
+        "drupal/layout_paragraphs": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

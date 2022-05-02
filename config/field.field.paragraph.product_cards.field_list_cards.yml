@@ -1,0 +1,52 @@
+uuid: 5de9a755-914b-4834-b502-611c505b8b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_cards
+    - paragraphs.paragraphs_type.product_cards
+    - paragraphs.paragraphs_type.wrapper_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.product_cards.field_list_cards
+field_name: field_list_cards
+entity_type: paragraph
+bundle: product_cards
+label: 'List cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      wrapper_cards: wrapper_cards
+    negate: 0
+    target_bundles_drag_drop:
+      banner_with_a_picture:
+        weight: 9
+        enabled: false
+      card_1:
+        weight: 10
+        enabled: false
+      card_2:
+        weight: 11
+        enabled: false
+      card_3:
+        weight: 12
+        enabled: false
+      card_4:
+        weight: 13
+        enabled: false
+      from_library:
+        weight: 14
+        enabled: false
+      product_cards:
+        weight: 15
+        enabled: false
+      wrapper_cards:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

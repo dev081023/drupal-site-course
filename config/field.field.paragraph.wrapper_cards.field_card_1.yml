@@ -1,0 +1,52 @@
+uuid: eda8b0d2-4fa7-4a6d-8b14-32b8cc56610a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_1
+    - paragraphs.paragraphs_type.card_1
+    - paragraphs.paragraphs_type.wrapper_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.wrapper_cards.field_card_1
+field_name: field_card_1
+entity_type: paragraph
+bundle: wrapper_cards
+label: 'Card 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card_1: card_1
+    negate: 0
+    target_bundles_drag_drop:
+      banner_with_a_picture:
+        weight: 9
+        enabled: false
+      card_1:
+        weight: 10
+        enabled: true
+      card_2:
+        weight: 11
+        enabled: false
+      card_3:
+        weight: 12
+        enabled: false
+      card_4:
+        weight: 13
+        enabled: false
+      from_library:
+        weight: 14
+        enabled: false
+      product_cards:
+        weight: 15
+        enabled: false
+      wrapper_cards:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

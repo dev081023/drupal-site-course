@@ -1,0 +1,84 @@
+uuid: f904b0f5-3366-43d8-b066-713d24586415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wrapper_cards.field_card_
+    - field.field.paragraph.wrapper_cards.field_card_1
+    - field.field.paragraph.wrapper_cards.field_card_2
+    - field.field.paragraph.wrapper_cards.field_card_3
+    - paragraphs.paragraphs_type.wrapper_cards
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: ds_4col
+      library: ds/ds_4col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          first: div
+          second: div
+          third: div
+          fourth: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      first:
+        - field_card_1
+      second:
+        - field_card_2
+      third:
+        - field_card_3
+      fourth:
+        - field_card_
+id: paragraph.wrapper_cards.default
+targetEntityType: paragraph
+bundle: wrapper_cards
+mode: default
+content:
+  field_card_:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: fourth
+  field_card_1:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: first
+  field_card_2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: second
+  field_card_3:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: third
+hidden: {  }

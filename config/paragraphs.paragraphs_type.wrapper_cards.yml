@@ -1,0 +1,10 @@
+uuid: 926a1fe7-a5f6-46f8-bd4b-4ec23f26a8a2
+langcode: en
+status: true
+dependencies: {  }
+id: wrapper_cards
+label: 'Wrapper cards'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

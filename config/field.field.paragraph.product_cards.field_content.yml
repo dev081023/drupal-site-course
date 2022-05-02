@@ -1,0 +1,21 @@
+uuid: ebe68ced-4cc6-4881-bf9e-1c953d02db62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.product_cards
+  module:
+    - text
+id: paragraph.product_cards.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: product_cards
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

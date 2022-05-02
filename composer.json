@@ -27,6 +27,7 @@
     "drupal/core-recommended": "^9.3",
     "drupal/default_content": "^2.0@alpha",
     "drupal/devel": "^4.1",
+    "drupal/ds": "^3.13",
     "drupal/elf": "^1.4",
     "drupal/field_group": "^3.2",
     "drupal/paragraphs": "^1.14",

@@ -1,0 +1,10 @@
+uuid: cd0b68da-94c8-44f1-9d83-e8d513a8d2e4
+langcode: en
+status: true
+dependencies: {  }
+id: banner_with_a_picture
+label: 'Banner with a picture'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: ed26e065-3104-400c-aa45-fcaaea148fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.banner_with_a_picture
+id: paragraph.banner_with_a_picture.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: banner_with_a_picture
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: abfce68e-0372-414b-b308-2cf4aa9338fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.banner_with_a_picture
+  module:
+    - text
+id: paragraph.banner_with_a_picture.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: banner_with_a_picture
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

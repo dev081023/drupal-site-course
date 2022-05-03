@@ -1,0 +1,18 @@
+uuid: 634d783a-17b1-4217-83e2-a143aeb548ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Conference
+type: conference
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

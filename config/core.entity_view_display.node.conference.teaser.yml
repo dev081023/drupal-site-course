@@ -1,0 +1,20 @@
+uuid: d91293ac-ea8f-4504-894e-90b131dee22d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.conference
+  module:
+    - user
+id: node.conference.teaser
+targetEntityType: node
+bundle: conference
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

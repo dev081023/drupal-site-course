@@ -1,0 +1,57 @@
+uuid: d22be8ff-ed03-48c7-9745-08f7e55a404e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.conference
+    - paragraphs.paragraphs_type.banner_with_a_picture
+    - paragraphs.paragraphs_type.forms_registartion_camp
+  module:
+    - entity_reference_revisions
+id: node.conference.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: conference
+label: Paragraphs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner_with_a_picture: banner_with_a_picture
+      forms_registartion_camp: forms_registartion_camp
+    negate: 0
+    target_bundles_drag_drop:
+      banner_with_a_picture:
+        weight: 10
+        enabled: true
+      card_1:
+        weight: 11
+        enabled: false
+      card_2:
+        weight: 12
+        enabled: false
+      card_3:
+        weight: 13
+        enabled: false
+      card_4:
+        weight: 14
+        enabled: false
+      forms_registartion_camp:
+        weight: 15
+        enabled: true
+      from_library:
+        weight: 16
+        enabled: false
+      product_cards:
+        weight: 17
+        enabled: false
+      wrapper_cards:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

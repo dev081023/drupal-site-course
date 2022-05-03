@@ -1,0 +1,32 @@
+uuid: 49830998-eda9-4660-81d8-23db63c5a6fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_participant
+    - paragraphs.paragraphs_type.forms_registartion_camp
+    - webform.webform.participant
+  module:
+    - webform
+id: paragraph.forms_registartion_camp.field_participant
+field_name: field_participant
+entity_type: paragraph
+bundle: forms_registartion_camp
+label: Participant
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 2b357a87-3a95-4104-a9a7-688fb760fa57
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

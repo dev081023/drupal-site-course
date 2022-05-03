@@ -1,0 +1,10 @@
+uuid: 5cbbaa22-4de2-4810-8c57-1edeaf5df29c
+langcode: en
+status: true
+dependencies: {  }
+id: forms_registartion_camp
+label: 'Forms registartion camp'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

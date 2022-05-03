@@ -1,0 +1,32 @@
+uuid: d51cde78-c034-4ac4-96f6-5f127e7dab16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_speacker
+    - paragraphs.paragraphs_type.forms_registartion_camp
+    - webform.webform.speaker
+  module:
+    - webform
+id: paragraph.forms_registartion_camp.field_speacker
+field_name: field_speacker
+entity_type: paragraph
+bundle: forms_registartion_camp
+label: Speaker
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 191f78ef-c2d9-48f0-9759-d5fdf1f3dc6a
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

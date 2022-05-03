@@ -1,0 +1,78 @@
+uuid: 4b29c130-6229-4d2a-b69f-66b4ca31bb95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.forms_registartion_camp.field_participant
+    - field.field.paragraph.forms_registartion_camp.field_speacker
+    - paragraphs.paragraphs_type.forms_registartion_camp
+  module:
+    - field_group
+    - webform
+third_party_settings:
+  field_group:
+    group_forms:
+      children:
+        - group_sp
+        - group_speaker_form
+      label: Forms
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_sp:
+      children:
+        - field_participant
+      label: 'Participant form'
+      parent_name: group_forms
+      region: content
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+    group_speaker_form:
+      children:
+        - field_speacker
+      label: 'Speaker form'
+      parent_name: group_forms
+      region: content
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+id: paragraph.forms_registartion_camp.default
+targetEntityType: paragraph
+bundle: forms_registartion_camp
+mode: default
+content:
+  field_participant:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_speacker:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_form
     - node.type.test
-    - webform.webform.speaker
+    - webform.webform.participant
   module:
     - webform
 id: node.test.field_form
@@ -18,7 +18,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 191f78ef-c2d9-48f0-9759-d5fdf1f3dc6a
+    target_uuid: 2b357a87-3a95-4104-a9a7-688fb760fa57
     default_data: ''
     status: open
     open: ''

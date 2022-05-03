@@ -1,4 +1,4 @@
-uuid: 191f78ef-c2d9-48f0-9759-d5fdf1f3dc6a
+uuid: 2b357a87-3a95-4104-a9a7-688fb760fa57
 langcode: en
 status: open
 dependencies: {  }
@@ -8,64 +8,31 @@ close: null
 uid: 2
 template: false
 archive: false
-id: speaker
-title: Speaker
-description: 'Registration Form for Speakers'
+id: participant
+title: Participant
+description: 'Registration form for Participants'
 category: ''
 elements: |-
-  your_name:
+  name:
     '#type': textfield
     '#title': Name
     '#required': true
-    '#required_error': 'Please enter your name in this field'
     '#default_value': '[current-user:display-name]'
   email:
     '#type': email
     '#title': Email
     '#required': true
-    '#required_error': 'Please enter your mailing address in this field'
+    '#unique': true
     '#default_value': '[current-user:mail]'
   telephone:
     '#type': tel
     '#title': Telephone
     '#required': true
-    '#required_error': 'Please enter your phone number in this field'
+    '#unique': true
     '#international': true
     '#international_initial_country': UA
     '#international_preferred_countries':
       - PL
-  topic:
-    '#type': textfield
-    '#title': Topic
-    '#required': true
-    '#required_error': 'Specify the topic of your report'
-  description_of_the_report:
-    '#type': textarea
-    '#title': 'Description of the report'
-    '#required': true
-    '#required_error': 'Add a description to your report'
-  insert_a_link_to_a_presentation_:
-    '#type': checkbox
-    '#title': 'Insert a link to a presentation?'
-  link_to_presentation:
-    '#type': webform_link
-    '#title': 'Link to presentation'
-    '#states':
-      visible:
-        ':input[name="insert_a_link_to_a_presentation_"]':
-          checked: true
-  insert_presentation_file_:
-    '#type': checkbox
-    '#title': 'Insert presentation file?'
-  presentation_file:
-    '#type': webform_document_file
-    '#title': 'Presentation file'
-    '#states':
-      visible:
-        ':input[name="insert_presentation_file_"]':
-          checked: true
-    '#file_placeholder': 'Files with extension: pdf/pptx'
-    '#file_extensions': 'pdf pptx'
 css: ''
 javascript: ''
 settings:
@@ -79,7 +46,7 @@ settings:
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform
-  form_submit_once: false
+  form_submit_once: true
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
@@ -102,14 +69,14 @@ settings:
   form_autofocus: false
   form_details_toggle: false
   form_reset: false
-  form_access_denied: login
+  form_access_denied: default
   form_access_denied_title: ''
-  form_access_denied_message: '<h4><strong>To be added as a speaker, first <a href="http://drupal.localhost/user/register">register</a> on the site!</strong></h4>'
+  form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
   form_attributes: {  }
-  form_method: post
-  form_action: 'https://drupalcampkyiv.org/'
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -168,10 +135,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: modal
   confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Redirect to payment'
+  confirmation_message: "<strong>In the payment comment, indicate the mail or phone number during registration!<br />\r\n<br />\r\n<a href=\"http://example.org\">Go to payment page</a></strong>"
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -203,6 +170,7 @@ settings:
 access:
   create:
     roles:
+      - anonymous
       - authenticated
     users: {  }
     permissions: {  }

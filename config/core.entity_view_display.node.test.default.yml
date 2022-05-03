@@ -1,0 +1,29 @@
+uuid: 0420e1a6-0725-4984-8c01-b2a43bf24fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test.field_form
+    - node.type.test
+  module:
+    - user
+    - webform
+id: node.test.default
+targetEntityType: node
+bundle: test
+mode: default
+content:
+  field_form:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

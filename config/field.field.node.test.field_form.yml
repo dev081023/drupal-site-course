@@ -1,0 +1,32 @@
+uuid: 61d7ac5f-e3b3-48b3-a4ad-bf4573da0bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form
+    - node.type.test
+    - webform.webform.speaker
+  module:
+    - webform
+id: node.test.field_form
+field_name: field_form
+entity_type: node
+bundle: test
+label: Form
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 191f78ef-c2d9-48f0-9759-d5fdf1f3dc6a
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

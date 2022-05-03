@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_category
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -24,12 +23,6 @@ content:
     third_party_settings: {  }
   contact:
     weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_category:
-    type: options_buttons
-    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }

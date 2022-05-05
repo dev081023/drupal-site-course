@@ -16,6 +16,7 @@ module:
   comment: 0
   config: 0
   contact: 0
+  content_moderation: 0
   context: 0
   context_ui: 0
   contextual: 0
@@ -78,6 +79,7 @@ module:
   views_ui: 0
   webform: 0
   webform_ui: 0
+  workflows: 0
   ds: 1
   pathauto: 1
   views: 10
@@ -92,4 +94,7 @@ theme:
   bootstrap5: 0
   bootstrap: 0
   radix: 0
+  bootstrap4: 0
+  bootstrap_business: 0
+  drupal8_zymphonies_theme: 0
 profile: minimal

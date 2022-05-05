@@ -1,27 +1,29 @@
-uuid: 5b6da5f5-0b08-4c43-9c3c-5989c4381c7d
+uuid: eaff78d8-dcb5-44ff-b80e-53a76c9d0ffa
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:banner:330f4472-ae09-4fc4-a98d-3a55cee48be5'
   module:
+    - block_content
     - context
-    - search
     - system
   theme:
-    - bartik
-_core:
-  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
-id: bartik_search
-theme: bartik
-region: sidebar_first
-weight: -1
+    - bootstrap
+id: banner1
+theme: bootstrap
+region: sidebar_second
+weight: -9
 provider: null
-plugin: search_form_block
+plugin: 'block_content:330f4472-ae09-4fc4-a98d-3a55cee48be5'
 settings:
-  id: search_form_block
-  label: Search
-  label_display: visible
-  provider: search
-  page_id: node_search
+  id: 'block_content:330f4472-ae09-4fc4-a98d-3a55cee48be5'
+  label: 'Banner 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
 visibility:
   user_status:
     id: user_status
@@ -44,5 +46,5 @@ visibility:
     values: ''
   request_path:
     id: request_path
-    negate: true
+    negate: false
     pages: /node/50

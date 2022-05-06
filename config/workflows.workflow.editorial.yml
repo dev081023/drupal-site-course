@@ -1,0 +1,60 @@
+uuid: 46ff6627-31db-43b9-9643-03f4bfe72161
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: false
+    draft:
+      label: Draft
+      weight: -2
+      published: false
+      default_revision: false
+    moderation:
+      label: Moderation
+      weight: -1
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 0
+      published: true
+      default_revision: true
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -2
+    draft:
+      label: Draft
+      from:
+        - draft
+      to: moderation
+      weight: 0
+    moderation:
+      label: Moderation
+      from:
+        - moderation
+      to: published
+      weight: -1
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: 1
+  entity_types: {  }
+  default_moderation_state: draft

@@ -1,0 +1,18 @@
+uuid: 7d341f8c-d645-4403-b29e-daa678eeff02
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.banner_with_a_picture
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.banner_with_a_picture
+target_entity_type_id: paragraph
+target_bundle: banner_with_a_picture
+default_langcode: site_default
+language_alterable: false

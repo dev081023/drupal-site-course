@@ -1,0 +1,18 @@
+uuid: 9db8a12c-4340-4014-83ae-752245370b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.forms_registartion_camp
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.forms_registartion_camp
+target_entity_type_id: paragraph
+target_bundle: forms_registartion_camp
+default_langcode: site_default
+language_alterable: false

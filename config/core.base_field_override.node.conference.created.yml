@@ -1,0 +1,18 @@
+uuid: 8652c716-3973-44b5-911e-d79bb77a1e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference
+id: node.conference.created
+field_name: created
+entity_type: node
+bundle: conference
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

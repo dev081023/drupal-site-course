@@ -1,0 +1,18 @@
+uuid: 9b2d62ab-04c6-4a29-b0a4-caf0b9f8a23a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slides
+id: node.slides.title
+field_name: title
+entity_type: node
+bundle: slides
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: bc331104-a19d-4499-9f64-06fc6313d1fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.forms_registartion_camp
+id: paragraph.forms_registartion_camp.created
+field_name: created
+entity_type: paragraph
+bundle: forms_registartion_camp
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

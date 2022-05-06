@@ -1,0 +1,20 @@
+uuid: 1cf5a25e-34ad-4819-8330-b2c341748241
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference
+  module:
+    - path
+id: node.conference.path
+field_name: path
+entity_type: node
+bundle: conference
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

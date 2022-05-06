@@ -12,7 +12,7 @@ bundle: card_2
 label: Price
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

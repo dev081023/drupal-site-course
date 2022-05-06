@@ -1,0 +1,22 @@
+uuid: 6733a5b0-8db6-4964-b8e2-521bce61b7c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.wrapper_cards
+id: paragraph.wrapper_cards.status
+field_name: status
+entity_type: paragraph
+bundle: wrapper_cards
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: f2ad43cb-af99-4035-84dd-d5a766475a83
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.forms_registartion_camp
+id: paragraph.forms_registartion_camp.status
+field_name: status
+entity_type: paragraph
+bundle: forms_registartion_camp
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

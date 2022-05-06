@@ -1,0 +1,18 @@
+uuid: 96fd3732-0391-4869-b2b8-0c4e00835b2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.label
+field_name: label
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: Label
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

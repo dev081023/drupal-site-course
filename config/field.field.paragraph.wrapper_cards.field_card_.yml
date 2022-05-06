@@ -15,7 +15,7 @@ bundle: wrapper_cards
 label: 'Card 4'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

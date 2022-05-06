@@ -1,0 +1,87 @@
+uuid: 441fa070-835e-4c5c-9bda-78f7a423a40f
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - node.type.article
+    - node.type.conference
+    - node.type.landing
+    - node.type.news
+    - node.type.page
+    - node.type.slides
+    - node.type.test
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+id: content_editor
+label: 'Content editor'
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create conference content'
+  - 'create image media'
+  - 'create landing content'
+  - 'create media'
+  - 'create news content'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create slides content'
+  - 'create terms in category'
+  - 'create terms in tags'
+  - 'create test content'
+  - 'create url aliases'
+  - 'delete article revisions'
+  - 'delete conference revisions'
+  - 'delete landing revisions'
+  - 'delete media'
+  - 'delete news revisions'
+  - 'delete own article content'
+  - 'delete own conference content'
+  - 'delete own image media'
+  - 'delete own landing content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own slides content'
+  - 'delete own test content'
+  - 'delete page revisions'
+  - 'delete slides revisions'
+  - 'delete test revisions'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own conference content'
+  - 'edit own image media'
+  - 'edit own landing content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own slides content'
+  - 'edit own test content'
+  - 'edit terms in category'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'update media'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

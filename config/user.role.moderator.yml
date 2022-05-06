@@ -1,0 +1,72 @@
+uuid: 98b51f2d-ec1b-4353-8737-e1631ea18c55
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - node.type.article
+    - node.type.conference
+    - node.type.landing
+    - node.type.news
+    - node.type.page
+    - node.type.slides
+    - node.type.test
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.tags
+  module:
+    - contextual
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+id: moderator
+label: Moderator
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create article content'
+  - 'create conference content'
+  - 'create image media'
+  - 'create landing content'
+  - 'create news content'
+  - 'create page content'
+  - 'create slides content'
+  - 'create terms in category'
+  - 'create terms in tags'
+  - 'create test content'
+  - 'delete article revisions'
+  - 'delete conference revisions'
+  - 'delete landing revisions'
+  - 'delete news revisions'
+  - 'delete own article content'
+  - 'delete own conference content'
+  - 'delete own image media'
+  - 'delete own landing content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own slides content'
+  - 'delete own test content'
+  - 'delete page revisions'
+  - 'delete slides revisions'
+  - 'delete test revisions'
+  - 'edit own article content'
+  - 'edit own conference content'
+  - 'edit own image media'
+  - 'edit own landing content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own slides content'
+  - 'edit own test content'
+  - 'edit terms in category'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

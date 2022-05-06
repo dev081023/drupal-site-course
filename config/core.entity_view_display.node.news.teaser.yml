@@ -61,4 +61,5 @@ hidden:
   field_created: true
   field_remote_video: true
   field_tags: true
+  langcode: true
   links: true

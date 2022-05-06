@@ -23,4 +23,5 @@ content:
     weight: 0
     region: content
 hidden:
+  langcode: true
   links: true

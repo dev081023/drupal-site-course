@@ -47,6 +47,7 @@ module:
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
   language: 0
+  languageicons: 0
   layout_builder: 0
   layout_discovery: 0
   layout_paragraphs: 0
@@ -96,10 +97,5 @@ theme:
   olivero: 0
   stable: 0
   classy: 0
-  bootstrap5: 0
   bootstrap: 0
-  radix: 0
-  bootstrap4: 0
-  bootstrap_business: 0
-  drupal8_zymphonies_theme: 0
 profile: minimal

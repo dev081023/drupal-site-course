@@ -35,6 +35,7 @@
     "drupal/elf": "^1.4",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/field_group": "^3.2",
+    "drupal/languageicons": "^1.0@beta",
     "drupal/layout_paragraphs": "^2.0@beta",
     "drupal/paragraphs": "^1.14",
     "drupal/pathauto": "^1.9",

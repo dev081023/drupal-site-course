@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0950c3a0e572d698812e943faf7e8404",
+    "content-hash": "513f90bb64faf7f3e819a646e1363520",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3714,6 +3714,54 @@
                 "source": "https://www.drupal.org/project/jquery_ui_touch_punch",
                 "issues": "https://www.drupal.org/project/issues/jquery_ui_touch_punch",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/languageicons",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/languageicons.git",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/languageicons-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "1b2ffa57dabfc7717d5474c7066a43e8fcdfa28a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1609835079",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Freso",
+                    "homepage": "https://www.drupal.org/user/27504"
+                },
+                {
+                    "name": "pfrenssen",
+                    "homepage": "https://www.drupal.org/user/382067"
+                }
+            ],
+            "description": "Adds icons to language links.",
+            "homepage": "https://www.drupal.org/project/languageicons",
+            "support": {
+                "source": "https://git.drupalcode.org/project/languageicons"
             }
         },
         {
@@ -13041,6 +13089,7 @@
         "drupal/bootstrap_business": 10,
         "drupal/default_content": 15,
         "drupal/entity_usage": 10,
+        "drupal/languageicons": 10,
         "drupal/layout_paragraphs": 10
     },
     "prefer-stable": true,

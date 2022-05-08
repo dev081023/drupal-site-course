@@ -7,3 +7,10 @@ display:
   default:
     display_options:
       title: Новости
+      filters:
+        field_region_value:
+          expose:
+            label: Регион
+        field_category_target_id:
+          expose:
+            label: Категория

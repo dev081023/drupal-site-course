@@ -4,3 +4,12 @@ display:
     display_options:
       menu:
         title: Новини
+  default:
+    display_options:
+      filters:
+        field_region_value:
+          expose:
+            label: Регіон
+        field_category_target_id:
+          expose:
+            label: Категорія

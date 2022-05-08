@@ -37,6 +37,7 @@
     "drupal/field_group": "^3.2",
     "drupal/languageicons": "^1.0@beta",
     "drupal/layout_paragraphs": "^2.0@beta",
+    "drupal/metatag": "^1.19",
     "drupal/paragraphs": "^1.14",
     "drupal/pathauto": "^1.9",
     "drupal/permissions_by_term": "^3.1",

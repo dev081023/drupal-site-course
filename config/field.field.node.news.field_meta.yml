@@ -1,0 +1,21 @@
+uuid: 05f12bdc-ba6c-4c9e-81ef-cc9c46cf5b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta
+    - node.type.news
+  module:
+    - metatag
+id: node.news.field_meta
+field_name: field_meta
+entity_type: node
+bundle: news
+label: Meta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

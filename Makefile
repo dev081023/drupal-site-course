@@ -10,7 +10,8 @@ start:
 	docker-compose start
 install: up
 	docker-compose exec -T php composer install --no-interaction
-	docker-compose exec -T php bash -c "drush site:install --existing-config --db-url=mysql://$(MYSQL_USER):$(MYSQL_PASS)@$(MYSQL_HOST):$(MYSQL_PORT)/$(MYSQL_DB_NAME) -y"
+	#docker-compose exec -T php bash -c "drush site:install --existing-config --db-url=mysql://$(MYSQL_USER):$(MYSQL_PASS)@$(MYSQL_HOST):$(MYSQL_PORT)/$(MYSQL_DB_NAME) -y"
+	@while [ -z "$$(docker-compose exec -T $(MYSQL_HOST) mysql -u$(MYSQL_USER) -p$(MYSQL_PASS) -N -B -e "SHOW DATABASES;" | grep $(MYSQL_DB_NAME))" ]; do echo "Waiting for database..."; sleep 1; done
 	docker-compose exec -T php bash -c "drush user:create yevhen --mail=\"drupal@example.com\" --password=\"dbrf23\""
 	docker-compose exec -T php bash -c "drush user:role:add administrator yevhen"
 	docker-compose exec -T php bash -c "drush user:block admin"

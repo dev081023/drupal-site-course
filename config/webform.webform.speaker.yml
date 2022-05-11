@@ -54,6 +54,7 @@ elements: |-
       visible:
         ':input[name="insert_a_link_to_a_presentation_"]':
           checked: true
+    '#title__access': false
   insert_presentation_file_:
     '#type': checkbox
     '#title': 'Insert presentation file?'

@@ -5,3 +5,11 @@ bda_news.news:
     _title: 'Latest news'
   requirements:
     _permission: 'view latest news page'
+
+bda_news.category_news:
+  path: '/category/{id}'
+  defaults:
+    _controller: '\Drupal\bda_news\Controller\News::nodesByCategoryView'
+    _title: 'Nodes by Category'
+  requirements:
+    _permission: 'view latest news page'

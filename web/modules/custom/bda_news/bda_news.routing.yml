@@ -1,0 +1,7 @@
+bda_news.news:
+  path: '/news/latest'
+  defaults:
+    _controller: '\Drupal\bda_news\Controller\News::latestNews'
+    _title: 'Latest news'
+  requirements:
+    _permission: 'view latest news page'

@@ -27,7 +27,7 @@ dependencies:
     - tour
 id: content_editor
 label: 'Content editor'
-weight: -7
+weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'

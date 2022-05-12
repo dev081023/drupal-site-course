@@ -1,0 +1,41 @@
+uuid: b50d71e0-a92b-445a-a5ca-c6cc4169dc46
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - node.type.news
+  module:
+    - contextual
+    - media
+    - node
+    - system
+    - toolbar
+    - tour
+id: publisher
+label: Publisher
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create image media'
+  - 'create news content'
+  - 'create remote_video media'
+  - 'delete media'
+  - 'delete own image media'
+  - 'delete own news content'
+  - 'delete own remote_video media'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own remote_video media'
+  - 'revert all revisions'
+  - 'update media'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

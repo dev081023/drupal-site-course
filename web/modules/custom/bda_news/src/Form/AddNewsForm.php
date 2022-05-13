@@ -4,6 +4,7 @@ namespace Drupal\bda_news\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
 
 class AddNewsForm extends FormBase {
 
@@ -58,6 +59,17 @@ class AddNewsForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+//    $em = \Drupal::entityTypeManager()->getStorage('node');
+    $news = Node::create([
+      'type' => 'news',
+      'title' => $form_state->getValue('title'),
+      'body' => [
+        'value' => $form_state->getValue('content'),
+      ],
+      'uid' => \Drupal::currentUser()->id(),
+    ]);
+    $news->save();
+
     $message = \Drupal::messenger();
     $message->addMessage('News with id ' . \Drupal::currentUser()->id() . ' was created and now waiting for publishing');
 

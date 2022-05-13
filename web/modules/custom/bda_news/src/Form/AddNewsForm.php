@@ -13,6 +13,16 @@ class AddNewsForm extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $termStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $ids = $termStorage->getQuery()
+      ->condition('vid', 'category')
+      ->execute();
+
+//    foreach ($termStorage->loadMultiple($ids) as $id) {
+//      echo $id->label() . '<br>';
+//    }
+//    exit();
+
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
@@ -21,9 +31,10 @@ class AddNewsForm extends FormBase {
     ];
 
     $form['content'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Content'),
-      '#markup' => $this->t('Field at least 10 characters long'),
+//      '#markup' => $this->t('Field at least 10 characters long'),
+      '#format' => 'full_html',
       '#required' => TRUE,
     ];
 
@@ -33,7 +44,6 @@ class AddNewsForm extends FormBase {
       '#options' => [
         '1' => 'Football',
         '2' => 'Tennis',
-        '3' => 'Hockey',
       ],
     ];
 
@@ -59,10 +69,10 @@ class AddNewsForm extends FormBase {
       $form_state->setErrorByName('title', $this->t('The title must be at least 10 character long.'));
     }
 
-    if (strlen($content) < 10) {
-      // Set an error for the form element with a key of "title".
-      $form_state->setErrorByName('title', $this->t('The content must be at least 10 character long.'));
-    }
+//    if (strlen($content) < 10) {
+//      // Set an error for the form element with a key of "title".
+//      $form_state->setErrorByName('title', $this->t('The content must be at least 10 character long.'));
+//    }
   }
 
   /**

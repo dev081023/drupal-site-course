@@ -30,11 +30,10 @@ class AddNewsForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['content'] = [
+    $form['body'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
-//      '#markup' => $this->t('Field at least 10 characters long'),
-      '#format' => 'full_html',
+      '#format' => 'basic_html',
       '#required' => TRUE,
     ];
 
@@ -59,30 +58,30 @@ class AddNewsForm extends FormBase {
     parent::validateForm($form, $form_state);
 
     $title = $form_state->getValue('title');
-    $content = $form_state->getValue('content');
+    $form_state->getValue('body');
 
     if (strlen($title) < 10) {
-      // Set an error for the form element with a key of "title".
       $form_state->setErrorByName('title', $this->t('The title must be at least 10 character long.'));
     }
 
-//    if (strlen($content) < 10) {
-//      // Set an error for the form element with a key of "title".
-//      $form_state->setErrorByName('title', $this->t('The content must be at least 10 character long.'));
-//    }
+    if (strlen($form_state->getValue('body')['value']) <= 3) {
+      $form_state->setErrorByName('body', $this->t('A message should contain more than 10 characters.'));
+    }
   }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-//    $em = \Drupal::entityTypeManager()->getStorage('node');
+    $body = $form_state->getValue('body')['value'];
+    $body = check_markup($body, 'basic_html');
     $news = Node::create([
       'type' => 'news',
       'title' => $form_state->getValue('title'),
       'body' => [
-        'value' => $form_state->getValue('content'),
+        'value' => $body,
       ],
+      'field_category' => $form_state->getValue('category'),
       'uid' => \Drupal::currentUser()->id(),
     ]);
     $news->setUnpublished();

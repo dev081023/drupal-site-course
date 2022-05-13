@@ -13,3 +13,11 @@ bda_news.category_news:
     _title: 'Nodes by Category'
   requirements:
     _permission: 'view latest news page'
+
+bda_news.add_news:
+  path: '/add-news'
+  defaults:
+    _form: '\Drupal\bda_news\Form\AddNewsForm'
+    _title: 'Add News'
+  requirements:
+    _permission: 'form add news'

@@ -13,6 +13,7 @@ dependencies:
     - node.type.slides
     - node.type.test
   module:
+    - bda_news
     - contextual
     - media
     - node
@@ -41,6 +42,7 @@ permissions:
   - 'edit any remote_video media'
   - 'edit any slides content'
   - 'edit any test content'
+  - 'form add news'
   - 'revert all revisions'
   - 'update any media'
   - 'view all revisions'

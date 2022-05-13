@@ -18,10 +18,10 @@ class AddNewsForm extends FormBase {
       ->condition('vid', 'category')
       ->execute();
 
-//    foreach ($termStorage->loadMultiple($ids) as $id) {
-//      echo $id->label() . '<br>';
-//    }
-//    exit();
+    $cats = [];
+    foreach ($termStorage->loadMultiple($ids) as $item) {
+      $cats[$item->id()] = $item->label();
+    }
 
     $form['title'] = [
       '#type' => 'textfield',
@@ -41,10 +41,7 @@ class AddNewsForm extends FormBase {
     $form['category'] = [
       '#type' => 'select',
       '#title' => $this->t('Category'),
-      '#options' => [
-        '1' => 'Football',
-        '2' => 'Tennis',
-      ],
+      '#options' => $cats,
     ];
 
     $form['submit'] = [

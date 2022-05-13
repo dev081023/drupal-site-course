@@ -68,6 +68,7 @@ class AddNewsForm extends FormBase {
       ],
       'uid' => \Drupal::currentUser()->id(),
     ]);
+    $news->setUnpublished();
     $news->save();
 
     $message = \Drupal::messenger();

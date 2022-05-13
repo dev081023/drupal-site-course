@@ -27,6 +27,16 @@ class AddNewsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['category'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Category'),
+      '#options' => [
+        '1' => 'Football',
+        '2' => 'Tennis',
+        '3' => 'Hockey',
+      ],
+    ];
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),

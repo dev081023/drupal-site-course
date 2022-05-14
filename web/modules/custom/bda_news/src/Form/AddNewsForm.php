@@ -5,6 +5,7 @@ namespace Drupal\bda_news\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 class AddNewsForm extends FormBase {
 
@@ -88,7 +89,7 @@ class AddNewsForm extends FormBase {
     $news->save();
 
     $message = \Drupal::messenger();
-    $message->addMessage('News with id ' . \Drupal::currentUser()->id() . ' was created and now waiting for publishing');
+    $message->addMessage('News with id ' . $news->id(). ' was created and now waiting for publishing');
 
     $form_state->setRedirect('<front>');
   }

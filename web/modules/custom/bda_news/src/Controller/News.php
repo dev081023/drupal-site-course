@@ -43,4 +43,25 @@ class News extends ControllerBase {
     }
     return $builder->viewMultiple($nodes, $view_mode);
   }
+
+  public function getAllNewsBySorted() {
+    $config = \Drupal::config('bda_news.settings');
+    $nodesStorage = \Drupal::entityTypeManager()->getStorage('node');
+    $ids = $nodesStorage->getQuery()
+    ->condition('status', 1)
+    ->condition('type', 'news')
+    ->pager(6)
+    ->sort($config->get('sorted'), 'DESC')
+    ->execute();
+
+    $entity_type = 'node';
+    $view_mode = 'teaser';
+    $builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
+    $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+    $nodes = [];
+    foreach ($storage->loadMultiple($ids) as $item) {
+      $nodes[] = $item;
+    }
+    return $builder->viewMultiple($nodes, $view_mode);
+  }
 }

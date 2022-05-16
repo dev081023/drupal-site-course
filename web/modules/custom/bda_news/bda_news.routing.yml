@@ -28,3 +28,11 @@ bda_news_settings:
     _form: '\Drupal\bda_news\Form\AllNewsSettingsForm'
   requirements:
     _permission: 'administer site configuration'
+
+bda_news.all_news:
+  path: '/news/all'
+  defaults:
+    _controller: '\Drupal\bda_news\Controller\News::getAllNewsBySorted'
+    _title: 'News by Sorted'
+  requirements:
+    _permission: 'access content'

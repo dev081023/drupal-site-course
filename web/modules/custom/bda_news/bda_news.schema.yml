@@ -1,0 +1,7 @@
+bda_news.settings:
+  type: config_object
+  label: 'News sorting'
+  mapping:
+    sorted:
+      type: string
+      label: 'Sorted'

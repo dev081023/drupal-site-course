@@ -21,3 +21,10 @@ bda_news.add_news:
     _title: 'Add News'
   requirements:
     _permission: 'form add news'
+
+bda_news_settings:
+  path: '/admin/config/news'
+  defaults:
+    _form: '\Drupal\bda_news\Form\AllNewsSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

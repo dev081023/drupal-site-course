@@ -48,7 +48,8 @@
     "drupal/views_infinite_scroll": "^2.0",
     "drupal/views_slideshow": "^4.8",
     "drupal/webform": "^6.1",
-    "drush/drush": "^11.0"
+    "drush/drush": "^11.0",
+    "squizlabs/php_codesniffer": "^3.6"
   },
   "conflict": {
     "drupal/drupal": "*"

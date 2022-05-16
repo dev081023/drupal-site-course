@@ -6,7 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 
 class News extends ControllerBase {
 
-  public function latestNews() {
+  public function latestNews(): array {
     $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     $ids = $nodeStorage->getQuery()
     ->condition('status', 1)
@@ -20,12 +20,7 @@ class News extends ControllerBase {
     $builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
     $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
     $node = $storage->load(reset($ids));
-    $build = $builder->view($node, $view_mode);
-    $output = render($build);
-
-    return array(
-      '#markup' => $output
-    );
+    return $builder->view($node, $view_mode);
   }
 
   public function nodesByCategoryView($id) {
@@ -34,7 +29,7 @@ class News extends ControllerBase {
     ->condition('status', '1')
     ->condition('type', 'news')
     ->condition('field_category', $id)
-    ->range(0, 10)
+    ->pager(6)
     ->sort('nid', 'DESC')
     ->execute();
 
@@ -46,7 +41,6 @@ class News extends ControllerBase {
     foreach ($storage->loadMultiple($ids) as $item) {
       $nodes[] = $item;
     }
-    $build = $builder->viewMultiple($nodes, $view_mode);
-    return $build;
+    return $builder->viewMultiple($nodes, $view_mode);
   }
 }

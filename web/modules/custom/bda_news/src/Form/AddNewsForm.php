@@ -2,18 +2,18 @@
 
 namespace Drupal\bda_news\Form;
 
+use Drupal\Component\Utility\Random;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
-use Drupal\node\NodeInterface;
 
 class AddNewsForm extends FormBase {
 
-  public function getFormId() {
+  public function getFormId(): string {
     return 'bda_add_news_form';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state): array {
     $termStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
     $ids = $termStorage->getQuery()
       ->condition('vid', 'category')
@@ -28,14 +28,14 @@ class AddNewsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#markup' => $this->t('Field at least 10 characters long'),
-      '#required' => TRUE,
+      '#default_value' => (new Random())->word(10),
     ];
 
     $form['body'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
       '#format' => 'basic_html',
-      '#required' => TRUE,
+      '#default_value' => (new Random())->paragraphs(),
     ];
 
     $form['category'] = [
@@ -58,10 +58,7 @@ class AddNewsForm extends FormBase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
 
-    $title = $form_state->getValue('title');
-    $form_state->getValue('body');
-
-    if (strlen($title) < 10) {
+    if (strlen($form_state->getValue('title')) < 10) {
       $form_state->setErrorByName('title', $this->t('The title must be at least 10 character long.'));
     }
 
@@ -89,7 +86,7 @@ class AddNewsForm extends FormBase {
     $news->save();
 
     $message = \Drupal::messenger();
-    $message->addMessage('News with id ' . $news->id(). ' was created and now waiting for publishing');
+    $message->addMessage('News with id ' . $news->id() . ' was created and now waiting for publishing');
 
     $form_state->setRedirect('<front>');
   }

@@ -1,0 +1,45 @@
+uuid: a2bbaf0e-10ea-42f5-8352-3609fec91ecf
+langcode: en
+status: true
+dependencies:
+  module:
+    - bda_news
+    - context
+    - system
+  theme:
+    - bootstrap
+id: mybdatemplate
+theme: bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: bda_template_block
+settings:
+  id: bda_template_block
+  label: 'My BDA Template'
+  label_display: visible
+  provider: bda_news
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/all

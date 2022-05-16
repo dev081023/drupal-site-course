@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bda_news_theme($existing, $type, $theme, $path): array {
+  return [
+    'bda_template' => [
+      'variables' => ['test_var' => NULL],
+    ]
+  ];
+}

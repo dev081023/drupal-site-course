@@ -1,12 +1,17 @@
 <?php
 
-
+/**
+ * @file
+ * Contains Drupal\bda_news\Form\AllNewsSettingsForm.
+ */
 namespace Drupal\bda_news\Form;
-
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * News output settings form by sorting type.
+ */
 class AllNewsSettingsForm extends ConfigFormBase {
 
   protected function getEditableConfigNames(): array {

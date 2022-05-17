@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ * Contains Drupal\bda_news\Form\AddNewsForm.
+ */
 namespace Drupal\bda_news\Form;
 
 use Drupal\Component\Utility\Random;
@@ -7,8 +11,14 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
 
+/**
+ * Form for adding news.
+ */
 class AddNewsForm extends FormBase {
 
+  /**
+   * {@inheritdoc}
+   */
   public function getFormId(): string {
     return 'bda_add_news_form';
   }

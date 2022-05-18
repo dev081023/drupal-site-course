@@ -11,7 +11,7 @@ jobs:
         run: make up
       - name: Pre-Install
         run: docker-compose exec -T --user=root php bash -c 'chown -R www-data:www-data /var/www'
-      - name: Install
-        run: make install
+#      - name: Install
+#        run: make install
       - name: Test
         run: make test

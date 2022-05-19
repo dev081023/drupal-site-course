@@ -7,9 +7,10 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_category
     - field.field.node.news.field_comment
-    - field.field.node.news.field_created
+    - field.field.node.news.field_flag
     - field.field.node.news.field_meta
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_publication_date
     - field.field.node.news.field_region
     - field.field.node.news.field_remote_video
     - field.field.node.news.field_tags
@@ -59,8 +60,9 @@ content:
     region: content
 hidden:
   field_comment: true
-  field_created: true
+  field_flag: true
   field_meta: true
+  field_publication_date: true
   field_remote_video: true
   field_tags: true
   langcode: true

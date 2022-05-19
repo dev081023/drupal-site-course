@@ -15,6 +15,7 @@ dependencies:
   module:
     - bda_news
     - contextual
+    - file
     - media
     - node
     - system
@@ -22,17 +23,21 @@ dependencies:
     - tour
 id: moderator
 label: Moderator
-weight: -8
+weight: -7
 is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access files overview'
   - 'access toolbar'
   - 'access tour'
+  - 'create news content'
   - 'delete any image media'
   - 'delete any media'
+  - 'delete any news content'
   - 'delete any remote_video media'
+  - 'delete own news content'
   - 'edit any article content'
   - 'edit any conference content'
   - 'edit any image media'
@@ -42,10 +47,13 @@ permissions:
   - 'edit any remote_video media'
   - 'edit any slides content'
   - 'edit any test content'
+  - 'edit own news content'
   - 'form add news'
+  - 'publication date selection'
   - 'revert all revisions'
   - 'update any media'
   - 'view all revisions'
+  - 'view field published date'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'

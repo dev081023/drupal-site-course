@@ -6,4 +6,6 @@ form add news:
   title: 'Access Form Add News'
   description: 'Permissions to add new news'
 
-
+view field published date:
+  title: 'Access From field Published Date'
+  description: 'Permission to view field published date'

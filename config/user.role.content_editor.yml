@@ -15,6 +15,7 @@ dependencies:
     - taxonomy.vocabulary.category
     - taxonomy.vocabulary.tags
   module:
+    - bda_news
     - comment
     - contextual
     - file
@@ -67,6 +68,7 @@ permissions:
   - 'delete page revisions'
   - 'delete slides revisions'
   - 'delete test revisions'
+  - 'edit any news content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own conference content'
@@ -79,6 +81,7 @@ permissions:
   - 'edit own test content'
   - 'edit terms in category'
   - 'edit terms in tags'
+  - 'form add news'
   - 'revert all revisions'
   - 'update media'
   - 'view all revisions'

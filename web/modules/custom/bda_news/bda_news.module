@@ -44,10 +44,10 @@ function dba_news_submit_handler(&$form, FormStateInterface $form_state) {
 /**
  * Implements hook_entity_field_access().
  */
-//function bda_news_entity_field_access($operation, \Drupal\Core\Field\FieldDefinitionInterface $field_definition, \Drupal\Core\Session\AccountInterface $account, \Drupal\Core\Field\FieldItemListInterface $items = NULL) {
-//  if ($operation == 'update' && $field_definition->getName() == 'field_publication_date') {
-//    return AccessResult::forbiddenIf(!$account->hasPermission('publication date selection'));
-//  }
-//
-//  return AccessResult::neutral();
-//}
+function bda_news_entity_field_access($operation, \Drupal\Core\Field\FieldDefinitionInterface $field_definition, \Drupal\Core\Session\AccountInterface $account, \Drupal\Core\Field\FieldItemListInterface $items = NULL) {
+  if ($operation == 'edit' && $field_definition->getName() == 'field_publication_date') {
+    return AccessResult::forbiddenIf(!$account->hasPermission('publication date selection'));
+  }
+
+  return AccessResult::neutral();
+}

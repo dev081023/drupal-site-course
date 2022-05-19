@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_theme().
  */
@@ -7,6 +9,33 @@ function bda_news_theme($existing, $type, $theme, $path): array {
   return [
     'bda_template' => [
       'variables' => ['test_var' => NULL],
-    ]
+    ],
   ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bda_news_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    $form['#submit'][] = 'dba_news_submit_handler';
+  }
+}
+
+/**
+ * Submit Handler for user_login_form.
+ * Redirects the moderator after login to the /admin/content page, and if not,
+ * to the main page.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function dba_news_submit_handler(&$form, FormStateInterface $form_state) {
+  $user = \Drupal::currentUser()->getRoles();
+  if (in_array('moderator', $user)) {
+    $form_state->setRedirect('system.admin_content');
+  } else {
+    $form_state->setRedirect('<front>');
+  }
+
 }

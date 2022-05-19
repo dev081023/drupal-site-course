@@ -5,3 +5,7 @@ view latest news page:
 form add news:
   title: 'Access Form Add News'
   description: 'Permissions to add new news'
+
+publication date selection:
+  title: 'Access publication date selection'
+  description: 'Permission publication date selection'

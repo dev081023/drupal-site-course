@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -23,7 +24,7 @@ function bda_news_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 }
 
 /**
- * Submit Handler for user_login_form.
+ * Submit Handler.
  * Redirects the moderator after login to the /admin/content page, and if not,
  * to the main page.
  *
@@ -34,8 +35,19 @@ function dba_news_submit_handler(&$form, FormStateInterface $form_state) {
   $user = \Drupal::currentUser()->getRoles();
   if (in_array('moderator', $user)) {
     $form_state->setRedirect('system.admin_content');
-  } else {
+  }
+  else {
     $form_state->setRedirect('<front>');
   }
-
 }
+
+/**
+ * Implements hook_entity_field_access().
+ */
+//function bda_news_entity_field_access($operation, \Drupal\Core\Field\FieldDefinitionInterface $field_definition, \Drupal\Core\Session\AccountInterface $account, \Drupal\Core\Field\FieldItemListInterface $items = NULL) {
+//  if ($operation == 'update' && $field_definition->getName() == 'field_publication_date') {
+//    return AccessResult::forbiddenIf(!$account->hasPermission('publication date selection'));
+//  }
+//
+//  return AccessResult::neutral();
+//}

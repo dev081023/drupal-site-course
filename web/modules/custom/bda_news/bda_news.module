@@ -65,12 +65,12 @@ function bda_news_entity_field_access($operation, FieldDefinitionInterface $fiel
 /**
  * Implements hook_entity_presave().
  */
-function bda_news_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
-  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_published_date->value == '') {
+function bda_news_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_publication_date->value == '') {
     if (!$entity->isNew() && $entity->get('status')
         ->getValue() != $entity->original->get('status')
         ->getValue()) {
-      $entity->field_published_date->value = date('d-m-y');
+      $entity->field_publication_date->value = date('d-m-Y');
     }
   }
 }

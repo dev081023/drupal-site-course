@@ -1,0 +1,22 @@
+uuid: 936d3366-afbf-4c2e-bcba-b08d17bce27b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bda_theme
+_core:
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: bda_theme_breadcrumbs
+theme: bda_theme
+region: header
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

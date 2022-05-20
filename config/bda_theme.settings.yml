@@ -1,0 +1,29 @@
+schemas:
+  bootstrap: 8000
+  bda_theme: 8000
+favicon:
+  mimetype: image/png
+  path: 'public://GO_Sport_logo_2_0.png'
+  url: 'http://drupal.localhost/sites/default/files/GO_Sport_logo_2_0.png'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: 'public://GO_Sport_logo (1).png'
+  url: ''
+  use_default: 1
+region_wells:
+  header: ''
+  primary_menu: ''
+  secondary_menu: ''
+  featured: ''
+  breadcrumb: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+reset_http_request_cache: ''
+table: ''

@@ -1,0 +1,50 @@
+uuid: 8ffa9c6f-18b3-43cd-90d4-13ce55b9c943
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:330f4472-ae09-4fc4-a98d-3a55cee48be5'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bda_theme
+id: bda_theme_banner1
+theme: bda_theme
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'block_content:330f4472-ae09-4fc4-a98d-3a55cee48be5'
+settings:
+  id: 'block_content:330f4472-ae09-4fc4-a98d-3a55cee48be5'
+  label: 'Banner 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/50

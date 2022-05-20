@@ -51,6 +51,7 @@ permissions:
   - 'form add news'
   - 'publication date selection'
   - 'revert all revisions'
+  - 'see future news releases'
   - 'update any media'
   - 'view all revisions'
   - 'view field published date'

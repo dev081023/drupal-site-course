@@ -1,0 +1,22 @@
+uuid: 3e352c23-95f5-46ef-a60c-8cb870a80af3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bda_theme
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: bda_theme_local_tasks
+theme: bda_theme
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,50 @@
+uuid: c2ba1a67-89cd-4d99-a39f-839ec6cd868e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_content
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - bda_theme
+id: bda_theme_views_block__related_content_block_1_2
+theme: bda_theme
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:related_content-block_1'
+settings:
+  id: 'views_block:related_content-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

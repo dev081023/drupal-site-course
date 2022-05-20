@@ -58,10 +58,6 @@ function bda_news_entity_field_access($operation, FieldDefinitionInterface $fiel
   return AccessResult::neutral();
 }
 
-
-/**
- * Implements hook_entity_update().
- */
 /**
  * Implements hook_entity_presave().
  */

@@ -104,4 +104,5 @@ theme:
   stable: 0
   classy: 0
   bootstrap: 0
+  bda_theme: 0
 profile: minimal

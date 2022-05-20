@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -55,4 +56,20 @@ function bda_news_entity_field_access($operation, FieldDefinitionInterface $fiel
   }
 
   return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function bda_news_entity_update(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getEntityType() == 'news') {
+    \Drupal::database()
+      ->update('node__field_published_date')
+      ->fields([
+        'field_published_date_value' => \Drupal::time()->getCurrentTime()
+      ])
+      ->condition('type', $entity->getEntityTypeId())
+      ->condition('id', $entity->id())
+      ->execute();
+  }
 }

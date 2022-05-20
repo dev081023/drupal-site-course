@@ -9,3 +9,7 @@ form add news:
 view field published date:
   title: 'Access From field Published Date'
   description: 'Permission to view field published date'
+
+see future news releases:
+  title: 'Access From see future news releases'
+  description: 'Permission to see future news releases'

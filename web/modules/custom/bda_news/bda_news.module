@@ -58,18 +58,19 @@ function bda_news_entity_field_access($operation, FieldDefinitionInterface $fiel
   return AccessResult::neutral();
 }
 
+
 /**
  * Implements hook_entity_update().
  */
-function bda_news_entity_update(EntityInterface $entity) {
-  if ($entity->getEntityTypeId() == 'node' && $entity->getEntityType() == 'news') {
-    \Drupal::database()
-      ->update('node__field_published_date')
-      ->fields([
-        'field_published_date_value' => \Drupal::time()->getCurrentTime()
-      ])
-      ->condition('type', $entity->getEntityTypeId())
-      ->condition('id', $entity->id())
-      ->execute();
+/**
+ * Implements hook_entity_presave().
+ */
+function bda_news_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_published_date->value == '') {
+    if (!$entity->isNew() && $entity->get('status')
+        ->getValue() != $entity->original->get('status')
+        ->getValue()) {
+      $entity->field_published_date->value = date('d-m-y');
+    }
   }
 }

@@ -1,0 +1,46 @@
+bda.view_news:
+  path: 'news/view'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\News::view'
+    _title: 'View news'
+  requirements:
+    _permission: 'access content'
+
+bda.latest_news:
+  path: '/news/latest'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\News::latestNews'
+    _title: 'Latest news'
+  requirements:
+    _permission: 'view latest news page'
+
+bda.category_news:
+  path: '/category/{id}'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\News::nodesByCategoryView'
+    _title: 'Nodes by Category'
+  requirements:
+    _permission: 'view latest news page'
+
+bda.add_news:
+  path: '/add-news'
+  defaults:
+    _form: '\Drupal\bda_m\Form\AddNewsForm'
+    _title: 'Add News'
+  requirements:
+    _permission: 'form add news'
+
+bda.news_settings:
+  path: '/admin/config/news'
+  defaults:
+    _form: '\Drupal\bda_m\Form\AllNewsSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+bda.sorted_news:
+  path: '/news/sorted'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\News::getAllNewsBySorted'
+    _title: 'News by Sorted'
+  requirements:
+    _permission: 'access content'

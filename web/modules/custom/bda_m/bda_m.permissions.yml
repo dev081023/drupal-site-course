@@ -1,0 +1,15 @@
+view latest news page:
+  title: 'Access Latest News page'
+  description: 'Access to view the latest news page'
+
+form add news:
+  title: 'Access Form Add News'
+  description: 'Permissions to add new news'
+
+view field publication date:
+  title: 'Access from field publication date'
+  description: 'Permission to view field publication date'
+
+see future news releases:
+  title: 'Access from see future news releases'
+  description: 'Permission see future news releases'

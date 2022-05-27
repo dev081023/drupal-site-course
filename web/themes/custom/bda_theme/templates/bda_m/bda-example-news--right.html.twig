@@ -1,0 +1,12 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  <h2 style="color: green;"{{ title_attributes }}>{{ title }}</h2>
+  <small><b>{{ post.published_at|date("m/d/Y") }}</b></small>
+  {{ title_suffix }}
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+  <p>
+    {{ category }}
+  </p>
+</div>

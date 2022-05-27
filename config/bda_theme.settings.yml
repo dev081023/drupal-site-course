@@ -5,7 +5,7 @@ favicon:
   mimetype: image/png
   path: 'public://GO_Sport_logo_2_0.png'
   url: 'http://drupal.localhost/sites/default/files/GO_Sport_logo_2_0.png'
-  use_default: 1
+  use_default: 0
 features:
   comment_user_picture: 1
   comment_user_verification: 1
@@ -14,16 +14,21 @@ features:
 logo:
   path: 'public://GO_Sport_logo (1).png'
   url: ''
-  use_default: 1
+  use_default: 0
 region_wells:
+  navigation: ''
+  navigation_collapsible: ''
   header: ''
-  primary_menu: ''
-  secondary_menu: ''
-  featured: ''
-  breadcrumb: ''
+  highlighted: ''
+  help: ''
   content: ''
   sidebar_first: ''
   sidebar_second: well
   footer: ''
+  primary_menu: ''
+  secondary_menu: ''
+  featured: ''
+  breadcrumb: ''
+navbar_position: ''
 reset_http_request_cache: ''
 table: ''

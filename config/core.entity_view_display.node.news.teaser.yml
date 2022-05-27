@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
+    - field.field.node.news.field_archive
     - field.field.node.news.field_category
     - field.field.node.news.field_comment
-    - field.field.node.news.field_flag
     - field.field.node.news.field_meta
     - field.field.node.news.field_news_image
     - field.field.node.news.field_publication_date
@@ -17,6 +17,7 @@ dependencies:
     - image.style.thin
     - node.type.news
   module:
+    - datetime
     - media
     - options
     - text
@@ -51,6 +52,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_publication_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_region:
     type: list_default
     label: inline
@@ -59,10 +69,9 @@ content:
     weight: 3
     region: content
 hidden:
+  field_archive: true
   field_comment: true
-  field_flag: true
   field_meta: true
-  field_publication_date: true
   field_remote_video: true
   field_tags: true
   langcode: true

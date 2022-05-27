@@ -1,24 +1,24 @@
-uuid: a2bbaf0e-10ea-42f5-8352-3609fec91ecf
+uuid: e4d712c6-f9f2-4af9-bde4-3fb35899a9a9
 langcode: en
 status: true
 dependencies:
   module:
-    - bda_news
+    - bda_m
     - context
     - system
   theme:
-    - bootstrap
-id: mybdatemplate
-theme: bootstrap
+    - bda_theme
+id: blockselectioncolorform
+theme: bda_theme
 region: sidebar_second
-weight: 0
+weight: -10
 provider: null
-plugin: bda_template_block
+plugin: selection_color_form_block
 settings:
-  id: bda_template_block
-  label: 'My BDA Template'
-  label_display: visible
-  provider: bda_news
+  id: selection_color_form_block
+  label: 'Block selection color form'
+  label_display: '0'
+  provider: bda_m
 visibility:
   user_status:
     id: user_status
@@ -42,4 +42,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news/all
+    pages: /news/view

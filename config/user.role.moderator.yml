@@ -13,7 +13,6 @@ dependencies:
     - node.type.slides
     - node.type.test
   module:
-    - bda_news
     - contextual
     - file
     - media
@@ -48,13 +47,10 @@ permissions:
   - 'edit any slides content'
   - 'edit any test content'
   - 'edit own news content'
-  - 'form add news'
   - 'publication date selection'
   - 'revert all revisions'
-  - 'see future news releases'
   - 'update any media'
   - 'view all revisions'
-  - 'view field published date'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'

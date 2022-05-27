@@ -13,7 +13,7 @@ _core:
 id: bda_theme_search
 theme: bda_theme
 region: sidebar_second
-weight: -10
+weight: -11
 provider: null
 plugin: search_form_block
 settings:

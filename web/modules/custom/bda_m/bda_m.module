@@ -1,0 +1,108 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function bda_m_theme($existing, $type, $theme, $path): array {
+  return [
+    'bda_template' => [
+      'variables' => ['test_var' => NULL],
+    ],
+    'bda_example_news' => [
+      'variables' => [
+        'title' => NULL,
+        'content' => NULL,
+        'category' => NULL,
+        'favorites' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bda_m_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    $form['#submit'][] = 'bda_m_submit_handler';
+  }
+}
+
+/**
+ * Submit Handler.
+ * Redirects the moderator after login to the /admin/content page, and if not,
+ * to the main page.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function bda_m_submit_handler(&$form, FormStateInterface $form_state) {
+  $user = \Drupal::currentUser()->getRoles();
+  if (in_array('moderator', $user)) {
+    $form_state->setRedirect('system.admin_content');
+  }
+  else {
+    $form_state->setRedirect('<front>');
+  }
+}
+
+/**
+ * Implements hook_entity_field_access().
+ */
+function bda_m_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, FieldItemListInterface $items = NULL) {
+  if ($operation == 'edit' && $field_definition->getName() == 'field_publication_date'
+    && !$account->hasPermission('view field publication date')) {
+    return AccessResult::forbidden();
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function bda_m_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_publication_date->value == '') {
+    $entity->field_publication_date->value = date('Y-m-d') . 'T' . date('h:i:s');
+  }
+}
+
+/**
+ * Implements hook_entity_access().
+ */
+function bda_m_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  if ($entity->getEntityTypeId() == 'node'
+    && $entity->getType() == 'news'
+    && $operation == 'view') {
+    $entityDate = $entity->get('field_publication_date')->date->getTimestamp();
+    $now = new DrupalDateTime('now');
+    $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
+    $now = $now->getTimestamp();
+    if ($entityDate > $now) {
+      if (in_array('moderator', $account->getRoles()) ||
+        $account->id() == $entity->getOwnerId()) {
+        return AccessResult::neutral();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+    return AccessResult::neutral();
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bda_m_preprocess_bda_example_news(&$variables) {
+  $variables['#attached']['library'][] = 'bda_m/custom';
+}

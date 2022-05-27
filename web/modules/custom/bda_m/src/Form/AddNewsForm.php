@@ -2,9 +2,10 @@
 
 /**
  * @file
- * Contains Drupal\bda_news\Form\AddNewsForm.
+ * Contains \Drupal\bda_m\Form\AddNewsForm.
  */
-namespace Drupal\bda_news\Form;
+
+namespace Drupal\bda_m\Form;
 
 use Drupal\Component\Utility\Random;
 use Drupal\Core\Form\FormBase;
@@ -23,12 +24,11 @@ class AddNewsForm extends FormBase {
     return 'bda_add_news_form';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state): array {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $termStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
     $ids = $termStorage->getQuery()
       ->condition('vid', 'category')
       ->execute();
-
     $cats = [];
     foreach ($termStorage->loadMultiple($ids) as $item) {
       $cats[$item->id()] = $item->label();
@@ -37,7 +37,7 @@ class AddNewsForm extends FormBase {
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#markup' => $this->t('Field at least 10 characters long'),
+      '#markup' => $this->t('Field at latest 10 char.long'),
       '#default_value' => (new Random())->word(10),
     ];
 
@@ -69,11 +69,12 @@ class AddNewsForm extends FormBase {
     parent::validateForm($form, $form_state);
 
     if (strlen($form_state->getValue('title')) < 10) {
-      $form_state->setErrorByName('title', $this->t('The title must be at least 10 character long.'));
-    }
-
-    if (strlen($form_state->getValue('body')['value']) <= 3) {
-      $form_state->setErrorByName('body', $this->t('A message should contain more than 10 characters.'));
+      $form_state->setErrorByName('title', $this->t('The title must
+      be at least 10 character long.'));
+      if (strlen($form_state->getValue('body')['value']) < 10) {
+        $form_state->setErrorByName('body', $this->t('A message should
+         contain more than 10 characters.'));
+      }
     }
   }
 
@@ -96,7 +97,8 @@ class AddNewsForm extends FormBase {
     $news->save();
 
     $message = \Drupal::messenger();
-    $message->addMessage('News with id ' . $news->id() . ' was created and now waiting for publishing');
+    $message->addMessage('News with id ' . $news->id() . ' was created
+    and now waiting for publishing');
 
     $form_state->setRedirect('<front>');
   }

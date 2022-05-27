@@ -1,0 +1,4 @@
+news_page:
+  title: 'Module News'
+  route_name: 'bda.view_news'
+  menu_name: main

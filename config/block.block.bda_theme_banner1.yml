@@ -13,7 +13,7 @@ dependencies:
 id: bda_theme_banner1
 theme: bda_theme
 region: sidebar_second
-weight: -9
+weight: -8
 provider: null
 plugin: 'block_content:330f4472-ae09-4fc4-a98d-3a55cee48be5'
 settings:

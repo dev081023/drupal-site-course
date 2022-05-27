@@ -1,24 +1,24 @@
-uuid: 3518077a-d327-4abf-958d-7c82c4f7c9bc
+uuid: 1bd3449d-ceee-4ebb-84d4-1c5419a53025
 langcode: en
 status: true
 dependencies:
   module:
-    - bda_news
+    - bda_m
     - context
     - system
   theme:
     - bda_theme
-id: bda_theme_mybdatemplate
+id: registrationblockforwebinars
 theme: bda_theme
 region: sidebar_second
-weight: 0
+weight: -9
 provider: null
-plugin: bda_template_block
+plugin: registration_for_events_form_block
 settings:
-  id: bda_template_block
-  label: 'My BDA Template'
+  id: registration_for_events_form_block
+  label: Webinars
   label_display: visible
-  provider: bda_news
+  provider: bda_m
 visibility:
   user_status:
     id: user_status
@@ -42,4 +42,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news/all
+    pages: /news/view

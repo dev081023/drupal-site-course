@@ -1,6 +1,6 @@
 uuid: 3e352c23-95f5-46ef-a60c-8cb870a80af3
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - bda_theme

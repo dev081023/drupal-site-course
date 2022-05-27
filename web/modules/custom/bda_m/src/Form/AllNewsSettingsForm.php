@@ -2,9 +2,10 @@
 
 /**
  * @file
- * Contains Drupal\bda_news\Form\AllNewsSettingsForm.
+ * Contains Drupal\bda_m\Form\AllNewsSettingsForm.
  */
-namespace Drupal\bda_news\Form;
+
+namespace Drupal\bda_m\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -14,19 +15,26 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class AllNewsSettingsForm extends ConfigFormBase {
 
+  /**
+   * @inheritDoc
+   */
   protected function getEditableConfigNames(): array {
-    return ['bda_news.settings'];
+    return ['bda.settings'];
   }
 
+  /**
+   * @inheritDoc
+   */
   public function getFormId(): string {
-    return 'bda_news.settings';
+    return 'bda_settings';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state): array {
-    $site_config = $this->config('bda_news.settings');
+    $site_config = $this->config('bda.settings');
+
     $form['settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('News Sorting Settings'),
+      '#title' => $this->t('News sorting settings'),
       '#open' => TRUE,
     ];
     $form['settings']['sorted'] = [
@@ -38,6 +46,7 @@ class AllNewsSettingsForm extends ConfigFormBase {
         'changed' => $this->t('Sorted by update'),
       ],
     ];
+
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = [
       '#type' => 'submit',
@@ -51,7 +60,7 @@ class AllNewsSettingsForm extends ConfigFormBase {
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('bda_news.settings')
+    $this->config('bda.settings')
       ->set('sorted', $form_state->getValue('sorted'))
       ->save();
 

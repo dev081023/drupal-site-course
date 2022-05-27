@@ -1,0 +1,5 @@
+name: BDA Product
+type: module
+description: Products
+package: Custom
+core_version_requirement: ^9

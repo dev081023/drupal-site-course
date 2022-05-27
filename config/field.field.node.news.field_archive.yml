@@ -1,15 +1,15 @@
-uuid: f09b5133-1f55-4aa7-b9c7-e67c005cedc6
+uuid: a1fabc20-b2af-4367-9c28-f9953dcdcb09
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_flag
+    - field.storage.node.field_archive
     - node.type.news
-id: node.news.field_flag
-field_name: field_flag
+id: node.news.field_archive
+field_name: field_archive
 entity_type: node
 bundle: news
-label: Flag
+label: Archive
 description: ''
 required: false
 translatable: false

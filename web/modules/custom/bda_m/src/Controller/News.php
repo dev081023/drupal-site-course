@@ -9,7 +9,6 @@ namespace Drupal\bda_m\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
-use Drupal\simple_sitemap\Manager\EntityManager;
 
 /**
  * A class that describes methods for working with the News content type.

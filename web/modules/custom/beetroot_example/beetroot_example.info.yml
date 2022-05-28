@@ -1,0 +1,5 @@
+name: Beetroot Example
+type: module
+description: Custom module course
+package: Custom
+core_version_requirement: ^9

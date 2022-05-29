@@ -1,0 +1,30 @@
+uuid: 83d99e17-1448-4f85-aafd-8e6475c95aa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Test type 1'
+      label: 'Test type 1'
+    -
+      value: 'Test type 2'
+      label: 'Test type 2'
+    -
+      value: 'Test type 3'
+      label: 'Test type 3'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

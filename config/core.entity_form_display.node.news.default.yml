@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.news.field_region
     - field.field.node.news.field_remote_video
     - field.field.node.news.field_tags
+    - field.field.node.news.field_type
     - node.type.news
   module:
     - comment
@@ -159,6 +160,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_type:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.news.field_region
     - field.field.node.news.field_remote_video
     - field.field.node.news.field_tags
+    - field.field.node.news.field_type
     - image.style.large
     - node.type.news
   module:
+    - bda_clean_text
     - comment
     - datetime
     - media
@@ -50,7 +52,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_news_image:
     type: media_thumbnail
@@ -93,6 +95,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_type:
+    type: test_list
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   field_archive: true

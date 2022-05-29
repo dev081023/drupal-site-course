@@ -13,6 +13,7 @@ dependencies:
     - node.type.slides
     - node.type.test
   module:
+    - bda_clean_text
     - contextual
     - file
     - media
@@ -51,6 +52,7 @@ permissions:
   - 'revert all revisions'
   - 'update any media'
   - 'view all revisions'
+  - 'view custom block'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'

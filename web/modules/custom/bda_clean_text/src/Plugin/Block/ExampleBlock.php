@@ -3,8 +3,10 @@
 
 namespace Drupal\bda_clean_text\Plugin\Block;
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Provides a 'example_block' block.
@@ -53,6 +55,10 @@ class ExampleBlock extends BlockBase {
     return [
       '#markup' => $this->configuration['some_config'],
     ];
+  }
+
+  protected function blockAccess(AccountInterface $account) {
+    return AccessResult::allowedIfHasPermissions($account, (array) 'view custom block');
   }
 
 }

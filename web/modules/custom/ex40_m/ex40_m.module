@@ -1,16 +1,30 @@
 <?php
 
-use Drupal\node\NodeInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_cron().
  */
-//function ex40_m_cron() {
-//  $entity = \Drupal::entityTypeManager()->getStorage('node');
-//  if (!$entity instanceof NodeInterface
-//    || $entity->bundle() !== 'news'
-//    || !$entity->hasField('field_archive')
-//    || $entity->get('field_archive')->value == 1) {
-//    return;
-//  }
-// }
+function ex40_m_cron() {
+  $now = new DrupalDateTime('now');
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $nids = $storage->getQuery()
+    ->condition('status', 1)
+    ->condition('type', 'news')
+    ->condition('field_archive', 0)
+    ->execute();
+
+  $nodes = Node::loadMultiple($nids);
+
+  foreach ($nodes as $node) {
+    $pub_date = $node->get('field_publication_date')->value;
+    // todo: Доробити або переробити
+    $interval = $now->diff($pub_date);
+    if ($interval->d > 30) {
+      $node->set('field_archive', 1);
+    }
+    $node->save();
+    \Drupal::entityTypeManager()->getStorage('node')->resetCache([$node]);
+  }
+}

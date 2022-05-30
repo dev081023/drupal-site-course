@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_cron().
+ */
+//function ex40_m_cron() {
+//  $entity = \Drupal::entityTypeManager()->getStorage('node');
+//  if (!$entity instanceof NodeInterface
+//    || $entity->bundle() !== 'news'
+//    || !$entity->hasField('field_archive')
+//    || $entity->get('field_archive')->value == 1) {
+//    return;
+//  }
+// }

@@ -1,0 +1,11 @@
+uuid: db16bb7a-202a-46e5-aba8-e72ea5c1e9bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plain_text
+id: node.plain_text
+target_entity_type_id: node
+target_bundle: plain_text
+default_langcode: site_default
+language_alterable: false

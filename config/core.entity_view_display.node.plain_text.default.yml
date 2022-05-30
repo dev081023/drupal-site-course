@@ -1,0 +1,28 @@
+uuid: 1577f5d8-085e-4f92-8454-54c33467202d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.plain_text.field_plain_text
+    - node.type.plain_text
+  module:
+    - user
+id: node.plain_text.default
+targetEntityType: node
+bundle: plain_text
+mode: default
+content:
+  field_plain_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

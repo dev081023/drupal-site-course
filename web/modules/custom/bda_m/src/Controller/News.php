@@ -31,7 +31,7 @@ class News extends ControllerBase {
         $related = $node->get('field_category')->referencedEntities();
         foreach ($related as $item) {
           $links[] = [
-            '#theme' => 'beetroot_example_news_link',
+            '#theme' => 'bda_example_news_link',
             '#url' => $item->toUrl('canonical')->toString(),
             '#title' => $item->label(),
             $item->getFieldDefinition('field_favorites'),

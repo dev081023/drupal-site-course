@@ -8,10 +8,18 @@ services:
       - ./.env
     environment:
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/vendor/bin
+      - SMTP_ADDRESS=mailhog
+      - SMTP_PORT=1025
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.php.rule=Host(`${PROJECT_BASE_URL}`)"
       - "traefik.http.services.php.loadbalancer.server.port=80"
+
+  mailhog:
+    image: mailhog/mailhog
+    labels:
+      - "traefik.http.services.mailhog.loadbalancer.server.port=8025"
+      - "traefik.http.routers.mailhog.rule=Host(`mailhog.${PROJECT_BASE_URL}`)"
 
   database:
     image: mariadb

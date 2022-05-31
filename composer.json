@@ -43,6 +43,7 @@
     "drupal/permissions_by_term": "^3.1",
     "drupal/radix": "^4.11",
     "drupal/realistic_dummy_content": "^3.1",
+    "drupal/reroute_email": "^2.1",
     "drupal/simple_sitemap": "^4.1",
     "drupal/stand_with_ukraine": "^1.0",
     "drupal/views_infinite_scroll": "^2.0",

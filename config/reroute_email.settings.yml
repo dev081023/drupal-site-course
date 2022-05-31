@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: gbxsfZiC2MMjzyiqbCPrKXXxlhQDa0pMNs0FSt_33ds
+enable: true
+address: admin@example.com
+roles:
+  - authenticated
+  - moderator
+  - content_editor
+  - administrator
+allowed: dev081023@gmail.com
+description: true
+message: true
+mailkeys: ''
+mailkeys_skip: ''

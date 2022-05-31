@@ -1,7 +1,9 @@
 <?php
 
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_cron().
@@ -19,12 +21,21 @@ function ex40_m_cron() {
 
   foreach ($nodes as $node) {
     $pub_date = $node->get('field_publication_date')->value;
-    // todo: Доробити або переробити
+    /** @var $pub_date \DateTimeInterface */
     $interval = $now->diff($pub_date);
     if ($interval->d > 30) {
       $node->set('field_archive', 1);
     }
     $node->save();
     \Drupal::entityTypeManager()->getStorage('node')->resetCache([$node]);
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function ex40_m_entity_insert(EntityInterface $entity) {
+  if ($entity instanceof NodeInterface) {
+    \Drupal::queue('mailing_letters_worker')->createItem($entity->id());
   }
 }

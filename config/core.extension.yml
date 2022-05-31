@@ -72,13 +72,13 @@ module:
   rdf: 0
   realistic_dummy_content: 0
   realistic_dummy_content_api: 0
-  reroute_email: 0
   responsive_image: 0
   search: 0
   serialization: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0
+  smtp: 0
   system: 0
   taxonomy: 0
   text: 0

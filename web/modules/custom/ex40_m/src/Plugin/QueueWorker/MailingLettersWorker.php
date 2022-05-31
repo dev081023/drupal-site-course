@@ -22,16 +22,22 @@ class MailingLettersWorker extends QueueWorkerBase {
    */
   public function processItem($id) {
     $node = Node::load($id);
+    $storage = \Drupal::entityTypeManager()->getStorage('user');
+    /** @var \Drupal\user\UserInterface $users */
+    $users = $storage->loadMultiple($storage->getQuery()
+      ->condition('role', 'authenticated')
+      ->execute());
     $mailManager = \Drupal::service('plugin.manager.mail');
     $module = 'ex40_m';
     $key = 'create_node';
-    $to = \Drupal::currentUser()->getEmail();
-    $params['message'] = 'Node with ' . $node->id() . ' created';
-    $params['node_title'] = $node->label();
-    $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = TRUE;
 
-    $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+    foreach ($users as $user) {
+      $mailManager->mail($module, $key,
+        $user->getEmail(), 'en',
+        ['message' => 'Node with ' . $node->id() . ' created', 'node_title' => $node->label()],
+        NULL, $send);
+    }
   }
 
 }

@@ -2,6 +2,7 @@
 
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 
@@ -10,6 +11,8 @@ use Drupal\node\NodeInterface;
  */
 function ex40_m_cron() {
   $now = new DrupalDateTime('now');
+  $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
+  $now = $now->getTimestamp();
   $storage = \Drupal::entityTypeManager()->getStorage('node');
   $nids = $storage->getQuery()
     ->condition('status', 1)
@@ -17,17 +20,15 @@ function ex40_m_cron() {
     ->condition('field_archive', 0)
     ->execute();
 
-  $nodes = Node::loadMultiple($nids);
+  $nodes = $storage->loadMultiple($nids);
 
   foreach ($nodes as $node) {
-    $pub_date = $node->get('field_publication_date')->value;
-    /** @var $pub_date \DateTimeInterface */
-    $interval = $now->diff($pub_date);
-    if ($interval->d > 30) {
+    $pub_date = $node->get('field_publication_date')->date->getTimestamp();
+    $diff = $now - $pub_date;
+    if ($diff > 60 * 60 * 24 * 30) {
       $node->set('field_archive', 1);
+      $node->save();
     }
-    $node->save();
-    \Drupal::entityTypeManager()->getStorage('node')->resetCache([$node]);
   }
 }
 

@@ -81,9 +81,11 @@ class BatchForm extends FormBase {
       ->condition('type', 'news')
       ->condition('nid', $params)
       ->execute();
-    $node = $nodeStorage->load($ids);
-    $node->set('field_archive', 1);
-    $node->save();
+    $nodes = $nodeStorage->loadMultiple($ids);
+    foreach ($nodes as $node) {
+      $node->set('field_archive', 1);
+      $node->save();
+    }
   }
 
 }

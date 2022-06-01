@@ -79,6 +79,9 @@ class BatchForm extends FormBase {
     ]);
   }
 
+  /**
+   * Node to archive checked
+   */
   public static function toArchive($params) {
     $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $nodeStorage->load($params);

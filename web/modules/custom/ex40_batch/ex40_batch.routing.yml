@@ -1,0 +1,7 @@
+ex40_batch.form:
+  path: '/examples/batch'
+  defaults:
+    _form: '\Drupal\ex40_batch\Form\BatchForm'
+    _title: 'Batch processing'
+  requirements:
+    _permission: 'access content'

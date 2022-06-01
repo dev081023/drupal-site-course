@@ -1,0 +1,5 @@
+name: EX40 Batch
+type: module
+description: Training module
+package: Custom
+core_version_requirement: ^9

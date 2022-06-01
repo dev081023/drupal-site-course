@@ -61,7 +61,7 @@ class BatchForm extends FormBase {
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $selected = $form_state->getValue('table');
-    $id = $form_state->getValue('table')['options'][0];
+    $id = $form_state->getValue('table')['options']['id'];
     $operations = [];
     foreach ($selected as $select) {
       $operations[] = [
@@ -77,11 +77,13 @@ class BatchForm extends FormBase {
 
   public static function toArchive($params) {
     $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
-    if ($nodeStorage->getEntityType() == 'news') {
-      $node = $nodeStorage->load($params[0]);
-      $node->set('field_archive', 1);
-      $node->save();
-    }
+    $ids = $nodeStorage->getQuery()
+      ->condition('type', 'news')
+      ->condition('nid', $params)
+      ->execute();
+    $node = $nodeStorage->load($ids);
+    $node->set('field_archive', 1);
+    $node->save();
   }
 
 }

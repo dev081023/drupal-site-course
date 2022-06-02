@@ -36,7 +36,7 @@ function bda_product_update_9105(&$sandbox) {
   }
   $id = array_shift($sandbox['ids']);
   $entity = \Drupal\bda_product\Entity\BdaProductEntity::load($id);
-  $entity->set('flag', FALSE);
+  $entity->set('flag', 0);
   $entity->save();
   $sandbox['#finished'] = 0;
   return t('@name updated.', ['@name' => $entity->label()]);

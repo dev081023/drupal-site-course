@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Create page About us
+ */
+function bda_product_update_9100(&$sandbox) {
+  \Drupal\node\Entity\Node::create([
+    'type' => 'page',
+    'title' => 'About us',
+  ])->save();
+}
+
+/**
+ * Add field flag
+ */
+function bda_product_update_9101(&$sandbox) {
+  $storage_definition = \Drupal\Core\Field\BaseFieldDefinition::create('boolean')
+    ->setLabel(t('Flag'))
+    ->setDefaultValue(TRUE)
+    ->setSetting('on_label', 'Yes');
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('flag', 'product', 'bda_product', $storage_definition);
+}

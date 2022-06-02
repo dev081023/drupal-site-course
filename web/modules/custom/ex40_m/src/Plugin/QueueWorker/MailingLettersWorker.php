@@ -33,6 +33,7 @@ class MailingLettersWorker extends QueueWorkerBase {
     $send = TRUE;
 
     foreach ($users as $user) {
+      /** @var $mailManager \Drupal\Core\Mail\MailManagerInterface */
       $mailManager->mail($module, $key,
         $user->getEmail(), 'en',
         ['message' => 'Node with ' . $node->id() . ' created', 'node_title' => $node->label()],

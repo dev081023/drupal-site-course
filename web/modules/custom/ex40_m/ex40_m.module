@@ -39,3 +39,9 @@ function ex40_m_entity_insert(EntityInterface $entity) {
     \Drupal::queue('mailing_letters_worker')->createItem($entity->id());
   }
 }
+
+/**
+ * Implements hook_mail().
+ */
+function ex40_m_mail($key, &$message, $params) {
+}

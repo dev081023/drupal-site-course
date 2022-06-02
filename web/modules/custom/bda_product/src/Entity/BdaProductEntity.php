@@ -24,9 +24,9 @@ use Drupal\Core\Field\BaseFieldDefinition;
  * ),
  *   bundle_label = @Translation("Product type"),
  *   base_table = "product",
+ *   data_table = "product_field_data",
  *   entity_keys = {
  *     "id" = "pid",
- *     "uuid" = "uuid",
  *   },
  * )
  */
@@ -36,11 +36,6 @@ class BdaProductEntity extends ContentEntityBase implements ContentEntityInterfa
     $fields['pid'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('PID'))
       ->setDescription(t('The PID of the Product entity.'))
-      ->setReadOnly(TRUE);
-
-    $fields['uuid'] = BaseFieldDefinition::create('uuid')
-      ->setLabel(t('UUID'))
-      ->setDescription(t('The UUID of the Product entity.'))
       ->setReadOnly(TRUE);
 
     $fields['name'] = BaseFieldDefinition::create('string')

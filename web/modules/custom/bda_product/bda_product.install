@@ -3,7 +3,7 @@
 /**
  * Create page About us
  */
-function bda_product_update_9100(&$sandbox) {
+function bda_product_update_9103(&$sandbox) {
   \Drupal\node\Entity\Node::create([
     'type' => 'page',
     'title' => 'About us',
@@ -13,11 +13,31 @@ function bda_product_update_9100(&$sandbox) {
 /**
  * Add field flag
  */
-function bda_product_update_9101(&$sandbox) {
+function bda_product_update_9104(&$sandbox) {
   $storage_definition = \Drupal\Core\Field\BaseFieldDefinition::create('boolean')
     ->setLabel(t('Flag'))
     ->setDefaultValue(TRUE)
+    ->setRequired(FALSE)
     ->setSetting('on_label', 'Yes');
   \Drupal::entityDefinitionUpdateManager()
     ->installFieldStorageDefinition('flag', 'product', 'bda_product', $storage_definition);
+}
+
+/**
+ * Set default value from flag field
+ */
+function bda_product_update_9105(&$sandbox) {
+  if (!isset($sandbox['ids'])) {
+    $sandbox['ids'] = \Drupal::entityQuery('product')->execute();
+  }
+  if (empty($sandbox['ids'])) {
+    $sandbox['#finished'] = 1;
+    return t('All items updated');
+  }
+  $id = array_shift($sandbox['ids']);
+  $entity = \Drupal\bda_product\Entity\BdaProductEntity::load($id);
+  $entity->set('flag', FALSE);
+  $entity->save();
+  $sandbox['#finished'] = 0;
+  return t('@name updated.', ['@name' => $entity->label()]);
 }

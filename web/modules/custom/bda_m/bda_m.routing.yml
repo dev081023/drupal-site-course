@@ -44,3 +44,24 @@ bda.sorted_news:
     _title: 'News by Sorted'
   requirements:
     _permission: 'access content'
+
+#example_route_with_form_autocomplete:
+#  path: '/form/example_autocomplete'
+#  defaults:
+#    _controller: '\Drupal\bda_m\Controllers\Example::autocomplete'
+#  requirements:
+#    _permission: 'access beetroot example page'
+
+example_route_api:
+  path: '/example/api'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\Example::api'
+  requirements:
+    _permission: 'access content'
+
+example_ajax_link:
+  path: '/example/ajax-link'
+  defaults:
+    _controller: '\Drupal\bda_m\Controller\Example::ajaxLink'
+  requirements:
+    _permission: 'access content'

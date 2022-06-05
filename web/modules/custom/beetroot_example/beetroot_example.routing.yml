@@ -4,3 +4,10 @@ example_route:
     _controller: '\Drupal\beetroot_example\Controllers\Example::view'
   requirements:
     _permission: 'access beetroot example page'
+
+example_route_drupal_version:
+  path: '/example/version'
+  defaults:
+    _controller: '\Drupal\beetroot_example\Controllers\Example::version'
+  requirements:
+    _permission: 'access content'

@@ -17,6 +17,8 @@ install: up
 	docker-compose exec -T php bash -c 'mkdir -p "drush" && echo -e "options:\n  uri: http://$(PROJECT_BASE_URL)" > drush/drush.yml'
 cli:
 	docker-compose exec php bash
+node-cli:
+	docker-compose exec node bash
 uli:
 	docker-compose exec php bash -c "drush uli"
 test:

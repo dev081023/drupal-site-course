@@ -6,7 +6,7 @@ package: Custom
 core: 8.x
 core_version_requirement: ^8 || ^9
 libraries:
-  - bda_theme/global
+  - "bda_theme/global-libraries"
 regions:
   header: 'Header'
   primary_menu: 'Primary menu'

@@ -51,5 +51,17 @@ services:
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  node:
+    image: node:slim
+    user: "node"
+    environment:
+      - NODE_ENV=development
+      - SHELL=bash
+    volumes:
+      - .:/home/node/app
+    working_dir: /home/node/app/web/themes/custom/bda_theme
+    command: sh -c "npm ci && npm run build"
+
 volumes:
   my-datavolume:

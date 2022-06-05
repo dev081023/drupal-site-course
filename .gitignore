@@ -52,3 +52,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+web/themes/custom/bda_theme/node_modules/
+web/themes/custom/bda_theme/dist/

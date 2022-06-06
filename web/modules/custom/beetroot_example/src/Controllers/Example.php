@@ -3,7 +3,8 @@
 namespace Drupal\beetroot_example\Controllers;
 
 use Drupal\Core\Controller\ControllerBase;
-use Laminas\Diactoros\Response\JsonResponse;
+use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class Example extends ControllerBase {
 
@@ -13,12 +14,27 @@ class Example extends ControllerBase {
     ];
   }
 
+  public function version(Node $node) {
+    return new JsonResponse($node->toArray());
+  }
 
-  public function version() {
-    return new JsonResponse([
-      'version' => \Drupal::VERSION,
-      'time' => \Drupal::time()->getCurrentTime(),
-    ]);
+
+  public function latest() {
+    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $ids = $storage->getQuery()
+      ->condition('status', 1)
+      ->condition('type', 'news')
+      ->range(0, 3)
+      ->execute();
+    $output = [];
+    $nodes = $storage->loadMultiple($ids);
+    foreach ($nodes as $node) {
+      $output[] = [
+        'title' => $node->label(),
+        'url' => $node->toUrl('canonical')->toString(),
+      ];
+    }
+    return new JsonResponse($output);
   }
 
 }

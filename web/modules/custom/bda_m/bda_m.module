@@ -93,7 +93,7 @@ function bda_m_entity_access(EntityInterface $entity, $operation, AccountInterfa
         return AccessResult::neutral();
       }
       else {
-        return AccessResult::forbidden();
+        return AccessResult::neutral();
       }
     }
     return AccessResult::neutral();
